@@ -7,6 +7,7 @@
   --Blue-Bolt--: #00B7FF;
   --white--: #FFFFFF;
   --Green-Munsell--: #00A878;
+  --Eerie-Black--: #0E1725;
 
   /* valor estandar de las fuentes*/
   --overall-font-size: 62.5%;
@@ -19,6 +20,7 @@
 }
 
 html {
+  background-color: var(--Eerie-Black--);
   font-size: var(--overall-font-size);
 }
 
@@ -49,7 +51,7 @@ p {
 }
 
 .contenedor {
-  max-width: 96%;
+  max-width: 85%;
   width: 100%;
   margin: 0 auto;
 }
@@ -87,7 +89,16 @@ p {
   background: linear-gradient(70deg, #A4C400, #00A878);
   color: var(--white--);
   border: .2rem solid #A4C400;
-  padding: 1.2rem 3.7rem;
+  padding: .8rem 3.7rem;
+  border-radius: 2rem;
+}
+
+.login-link {
+  text-decoration: none;
+  
+  color: var(--limerick--);
+  border: .2rem solid #A4C400;
+  padding: .8rem 3.7rem;
   border-radius: 2rem;
 }
 
@@ -585,6 +596,7 @@ section.form-banner-section {
       font-size: 2rem;
   }
   .logo-container img {
+      width: rem;
       height: 5.5rem;
   }
   a.main__banner-button {
