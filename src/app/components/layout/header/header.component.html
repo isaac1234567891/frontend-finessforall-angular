@@ -30,6 +30,11 @@
                   Acceder
               </a>
           </div>
+          <div>
+            <a *ngIf="userLoginOn" class="inscribirse-link" [routerLink]="['/home']" routerLinkActive="active">
+                Cerrar Sesion
+            </a>
+        </div>
       </div>
       <nav class="menu-container">
           <!-- Checkbox para controlar el menú -->

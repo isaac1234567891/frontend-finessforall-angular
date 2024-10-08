@@ -5,7 +5,9 @@ import { MealsComponent } from './pages/meals/meals.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 
+
 export const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'exercises', component: ExercisesComponent},
   { path: 'meals', component: MealsComponent},
