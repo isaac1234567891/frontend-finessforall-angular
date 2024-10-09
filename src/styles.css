@@ -71,11 +71,10 @@ p {
 
 
 .main-nav {
-  font-size: 1.9rem;
   list-style: none;
   display: flex;
   gap: 4rem;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   margin-left: 7rem;
 }
 
@@ -371,9 +370,15 @@ button {
 }
 
 /**Footer creditos*/
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .creditos {
   background-color: var(--limerick--);
-  display: flex;
+  /* display: flex; */
   list-style: none;
   justify-content: center;
   gap: 1rem;
