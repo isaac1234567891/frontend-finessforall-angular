@@ -50,6 +50,9 @@ p {
   height: 6rem;
 }
 
+label{
+  color: var(--white--);
+}
 .contenedor {
   max-width: 85%;
   width: 100%;
@@ -95,7 +98,7 @@ p {
 
 .login-link {
   text-decoration: none;
-  
+
   color: var(--limerick--);
   border: .2rem solid #A4C400;
   padding: .8rem 3.7rem;
