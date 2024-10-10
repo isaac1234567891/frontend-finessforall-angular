@@ -31,8 +31,10 @@ body {
 
 h1 {
   color: var(--limerick--);
-  font-family:"Abril Fatface", serif;
-  font-size: 6rem;
+  font-family:"Roboto";
+  font-weight: 900;
+  font-size: 9rem;
+  line-height: 9rem;
   margin: 0;
 }
 
@@ -161,45 +163,49 @@ ul.menu {
 }
 
 section.main-banner-section {
-  background-image: url(/images/main-banner.jpg);
   background-size: cover;
   background-position: right 0;
 }
 
 .main-banner {
-  width: 100%;
-  height: 69.7rem;
+  background: linear-gradient(180deg, rgba(14, 23, 37, 1) 15%, rgba(29, 37, 51, 1) 100%);
+  height: 42vw;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0 0 2.5rem 2.5rem;
+}
+
+.left-banner {
+  width: 40%;
 }
 
 p.main__banner-paragraph {
   color: var(--white--);
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-family: roboto, san sans-serif;
-  width: 60%;
+  font-weight: 200;
+  /* width: 60%; */
   padding: 1.2rem 0;
   height: 11rem;
 }
 
 a.main__banner-button {
   background-image: linear-gradient(to right, var(--limerick--) 0%, var(--Green-Munsell--) 50%, var(--limerick--) 100%);
-  margin: 1rem 1rem 1rem 0;
-  padding: 1.5rem 5.5rem;
+  padding: .8rem .8rem;
   text-align: center;
   text-decoration: none;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-family: 'Roboto';
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
   box-shadow: 0 0 2rem #000;
-  border-radius: 2.5rem;
+  border-radius: 2rem;
   display: block;
-  border: .4rem solid #a4c400;
-  width: 35rem;
+  border: .25rem solid #a4c400;
+  width: 20rem;
 }
 
 a.main__banner-button::before {
