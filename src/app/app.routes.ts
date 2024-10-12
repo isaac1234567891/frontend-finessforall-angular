@@ -4,6 +4,8 @@ import { ExercisesComponent } from './pages/exercises/exercises.component';
 import { MealsComponent } from './pages/meals/meals.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 export const routes: Routes = [
@@ -13,5 +15,8 @@ export const routes: Routes = [
   { path: 'meals', component: MealsComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
-  { path: '**', redirectTo: '404', pathMatch: 'full'}
+  { path: '404', component: PageNotFoundComponent},
+  { path: 'dashboard/admin', component: DashboardComponent},
+  { path: '**', redirectTo: '404', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full'}
 ];

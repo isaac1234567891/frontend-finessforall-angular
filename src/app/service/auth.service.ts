@@ -1,30 +1,40 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
-interface User {
-  name: string,
-  lastname:string,
-  age: number,
-  gender:string,
-  weight: string,
-  height: string,
-  mobile: string,
-  username: string,
-  password: string
-}
+import { catchError, Observable, of, pipe, tap, map } from 'rxjs';
+import { User } from '../interfaces/user';
+import { Response } from '../interfaces/response';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient, private router: Router) { }
 
-  registerUser ( newUser: User ){
-    return this.http.post( 'http://localhost:3000/api/auth/register', newUser);
+  //credenciales { User}
+  registerUser ( newUser: User ) : Observable<boolean>{
+    return this.http.post<Response>( 'http://localhost:3000/api/auth/register', newUser )
+      .pipe(
+        map( ( data ) => data.ok )
+      );
   }
+  //credenciales { username, password}
+  loginUser( user: User ) : Observable<string|boolean|undefined> {
+    return this.http.post<Response>( 'http://localhost:3000/api/auth/login', user )
+      .pipe(
+        tap( ( data: Response ) => {
+          console.log( data );
+          if( data.token ){
+            localStorage.setItem( 'token', data.token );
+            this.router.navigateByUrl('dashboard/admin');
+            // this.router.navigate(['meals']);
+            // this.router.navigate(['dashboard', 'admin']);
+          }
+        }),
+        map( data => data.msg ),
+        catchError( error => of ( false ))
 
-  loginUser( user: User ) {
-    return this.http.post( 'http://localhost:3000/api/auth/login', user);
+      );
   }
   // getUser () {
   //   return this.http.get( 'http://localhost:3000/api/auth/')

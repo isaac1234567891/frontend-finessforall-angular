@@ -360,7 +360,9 @@ input, select {
   border: .1rem solid #ccc;
   border-radius: .5rem;
 }
-
+.required-field{
+  color: var(--white--);
+}
 button {
   padding: 1rem;
   border-radius: 2rem;

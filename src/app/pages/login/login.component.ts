@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,8 +10,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  formData!: FormGroup;
-  constructor() {
+  formData: FormGroup;
+  constructor( private authService: AuthService) {
     this.formData = new FormGroup({
       username: new FormControl( '', [Validators.required, Validators.email]),
       password: new FormControl( '', [Validators.required, Validators.minLength(8), Validators.maxLength(20)])
@@ -20,6 +21,10 @@ export class LoginComponent {
   handleSubmit() {
     if( this.formData.valid ) {
       console.log(this.formData.value);
+      this.authService.loginUser(this.formData.value).subscribe( (data: string|boolean|undefined ) =>{
+        console.log(data);
+        this.formData.reset();
+      } );
     }
   }
 }
