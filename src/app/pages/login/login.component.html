@@ -38,7 +38,9 @@
               }
           }
       </div>
+      @if(message) {
+        <span>{{message}}</span>
+      }
       <button type="submit" [disabled]="formData.invalid">Entrar</button>
   </form>
-  <a class="contrasena" href="contrasena">¿Olvidaste tu contraseña?</a>
 </section>

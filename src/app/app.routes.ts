@@ -17,6 +17,6 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: '404', component: PageNotFoundComponent},
   { path: 'dashboard/admin', component: DashboardComponent},
-  { path: '**', redirectTo: '404', pathMatch: 'full'},
-  { path: '', redirectTo: 'home', pathMatch: 'full'}
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '**', redirectTo: '404', pathMatch: 'full'}
 ];

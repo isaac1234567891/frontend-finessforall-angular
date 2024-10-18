@@ -10,7 +10,7 @@
         <div class="error">
           @if(  formData.get( 'name' )?.invalid && ( formData.get( 'name' )?.dirty || formData.get( 'name' )?.touched )) {
             @if ( formData.get( 'name' )?.errors?.[ 'required' ] ) {
-              <small>El campo 'nombre' es obligatorio</small>
+              <small>El campo 'Nombre' es obligatorio</small>
             }
           }
         </div>
@@ -30,7 +30,7 @@
         <div class="error">
           @if(  formData.get( 'age' )?.invalid && ( formData.get( 'age' )?.dirty || formData.get( 'age' )?.touched )) {
             @if ( formData.get( 'age' )?.errors?.[ 'required' ] ) {
-              <small>El campo 'lastname' es obligatorio</small>
+              <small>El campo 'Edad' es obligatorio</small>
             }
           }
         </div>
@@ -44,7 +44,7 @@
         <div class="error">
           @if(  formData.get( 'gender' )?.invalid && ( formData.get( 'gender' )?.dirty || formData.get( 'gender' )?.touched )) {
             @if ( formData.get( 'gender' )?.errors?.[ 'required' ] ) {
-              <small>El campo 'sexo' es obligatorio</small>
+              <small>El campo 'Sexo' es obligatorio</small>
             }
           }
         </div>
@@ -54,7 +54,7 @@
         <div class="error">
           @if(  formData.get( 'weight' )?.invalid && ( formData.get( 'weight' )?.dirty || formData.get( 'weight' )?.touched )) {
             @if ( formData.get( 'weight' )?.errors?.[ 'required' ] ) {
-              <small>El campo 'peso' es obligatorio</small>
+              <small>El campo 'Peso' es obligatorio</small>
             }
           }
         </div>
@@ -64,7 +64,7 @@
         <div class="error">
           @if(  formData.get( 'height' )?.invalid && ( formData.get( 'height' )?.dirty || formData.get( 'height' )?.touched )) {
             @if ( formData.get( 'height' )?.errors?.[ 'required' ] ) {
-              <small>El campo 'estatura' es obligatorio</small>
+              <small>El campo 'Estatura' es obligatorio</small>
             }
           }
         </div>
@@ -74,7 +74,7 @@
         <div class="error">
           @if(  formData.get( 'mobile' )?.invalid && ( formData.get( 'mobile' )?.dirty || formData.get( 'mobile' )?.touched )) {
             @if ( formData.get( 'mobile' )?.errors?.[ 'required' ] ) {
-              <small>El campo 'celular' es obligatorio</small>
+              <small>El campo 'Celular' es obligatorio</small>
             }
           }
         </div>
@@ -84,7 +84,7 @@
         <div class="error">
           @if(  formData.get( 'username' )?.invalid && ( formData.get( 'username' )?.dirty || formData.get( 'username' )?.touched )) {
             @if ( formData.get( 'username' )?.errors?.[ 'required' ] ) {
-              <small>El campo 'email' es obligatorio</small>
+              <small>El campo 'Email' es obligatorio</small>
             }
               <!-- Valida la regla: Validators.email -->
             @if( formData.get( 'username' )?.errors?.[ 'email' ] ) {
@@ -100,7 +100,7 @@
           @if( formData.get( 'password' )?.invalid && ( formData.get( 'password' )?.dirty || formData.get( 'password' )?.touched ) ) {
               <!-- Valida la regla: Validators.required -->
               @if( formData.get( 'password' )?.errors?.[ 'required' ] ) {
-                  <small>El campo 'password' es obligatorio</small>
+                  <small>El campo 'Contraseña' es obligatorio</small>
               }
               <!-- Valida la regla: Validators.min -->
               @if( formData.get( 'password' )?.errors?.[ 'minlength' ] ) {
@@ -112,7 +112,9 @@
               }
           }
       </div>
-
+      <div class="field">
+        <p>{{message}}</p>
+      </div>
       <p class="required-field">*Campos obligatorios</p>
       <br>
         <button type="submit" [disabled]="formData.invalid">Enviar</button>

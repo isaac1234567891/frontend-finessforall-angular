@@ -11,6 +11,7 @@ import { AuthService } from '../../service/auth.service';
 })
 export class LoginComponent {
   formData: FormGroup;
+  message: string|boolean|undefined;
   constructor( private authService: AuthService) {
     this.formData = new FormGroup({
       username: new FormControl( '', [Validators.required, Validators.email]),
@@ -23,8 +24,12 @@ export class LoginComponent {
       console.log(this.formData.value);
       this.authService.loginUser(this.formData.value).subscribe( (data: string|boolean|undefined ) =>{
         console.log(data);
-        this.formData.reset();
+        this.message = data;
+        setTimeout(() => {
+          this.message = '';
+        }, 2000);
       } );
+      this.formData.reset();
     }
   }
 }

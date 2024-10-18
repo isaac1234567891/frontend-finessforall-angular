@@ -11,11 +11,20 @@ export class AuthService {
 
   constructor( private http: HttpClient, private router: Router) { }
 
-  //credenciales { User}
-  registerUser ( newUser: User ) : Observable<boolean>{
+  //credenciales { User }
+  registerUser ( newUser: User ) : Observable<string|undefined>{
     return this.http.post<Response>( 'http://localhost:3000/api/auth/register', newUser )
       .pipe(
-        map( ( data ) => data.ok )
+        map( ( data ) => {
+          if(!data.ok){
+            return data.msg;
+          }
+          return 'Se registro existasamente'
+        }
+        ),
+        catchError( (error) => {
+          return of ('Error en el servidor')
+        })
       );
   }
   //credenciales { username, password}
@@ -31,8 +40,16 @@ export class AuthService {
             // this.router.navigate(['dashboard', 'admin']);
           }
         }),
-        map( data => data.msg ),
-        catchError( error => of ( false ))
+        map( (data) => {
+          if(!data.ok){
+            return data.msg;
+          }
+          return 'Se logeo correctamente'
+        }  ),
+        catchError( (error) => {
+          console.error('error')
+          return of ('Error en el servidor')
+        })
 
       );
   }
