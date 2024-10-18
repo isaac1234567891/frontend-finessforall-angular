@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-
+  private authUserData! : User;
   constructor( private http: HttpClient, private router: Router) { }
-
+  // Getters
+  get authUser () {
+    return {...this.authUserData}
+  }
   //credenciales { User }
   registerUser ( newUser: User ) : Observable<string|undefined>{
     return this.http.post<Response>( 'http://localhost:3000/api/auth/register', newUser )
@@ -34,7 +37,11 @@ export class AuthService {
         tap( ( data: Response ) => {
           console.log( data );
           if( data.token ){
+            //Paso 1: Guardar el token en el localstorage
             localStorage.setItem( 'token', data.token );
+            //Paso 2: Obtener los datos del usuario ( nombre, correo, roles)
+            this.authUserData = data.data!;
+            //Paso 3: Guardar datos del usuario en el localstorage
             this.router.navigateByUrl('dashboard/admin');
             // this.router.navigate(['meals']);
             // this.router.navigate(['dashboard', 'admin']);

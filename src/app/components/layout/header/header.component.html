@@ -70,6 +70,10 @@
                   </a>
               </li>
           </ul>
+          @if (authUser) {
+            <!-- <pre>{{authUser|json}}</pre> -->
+            <span> hola, {{authUser.name}}</span>
+          }
       </nav>
   </div>
 </header>
