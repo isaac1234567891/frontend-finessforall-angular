@@ -1,6 +1,8 @@
 <main class="main">
 
     <section class="main-banner-section">
+        
+
         <!-- @for (item of ads; track $index) {
             <div class="contenedor main-banner">
                 <div class="left-banner">
@@ -25,35 +27,67 @@
                 <a class="main__banner-button" [routerLink]="['/register']" routerLinkActive="active">Regístrate ahora</a>
             </div>
             <div class="right-banner">
-                <img src="assets/image/fitness-for-all-banner-register.png" alt="mujer practicando crossfit con sogas">
+                <img class="imgBannerHome" src="assets/image/fitness-for-all-banner-register.png" alt="mujer practicando crossfit con sogas">
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="exercises-section">
+        <div class="contenedor exercises">
+            <div class="exercises-content">
+                <div class="leftHome">
+                    <div class="ejerciciosHome">
+                        <div class="parrafoHome">
+                            <h2 class="subtittle">Ejercicios para tu rutina diaria</h2>
+                            <p>El secreto del bombeo perfecto: el entrenamiento en la zona de pesos libres</p>
+                            <div>
+                                <a class="ir-ahora" [routerLink]="['/meals']" routerLinkActive="active">
+                                    Ir ahora
+                                </a>
+                            </div>
+                        </div>
+                        <div class="imgHome">
+                            <img src="assets/image/hombre-con-balon-medicinal.png" alt="Hombre practicando crossfit con balón medicinal">
+                        </div>                        
+                    </div>
+                    <div class="alimentacionHome">
+                        <div class="parrafoHome">
+                            <h2 class="subtittle">Alimentación para tu día a día</h2>
+                            <p>La alimentación es uno de los pilares para tener excelentes hábitos de vida saludables.</p>
+                            <div>
+                                <a class="ir-ahora" [routerLink]="['/meals']" routerLinkActive="active">
+                                    Ir ahora
+                                </a>
+                            </div>
+                        </div>
+                        <div class="imgHome">
+                            <img src="assets/image/mujer-alimentacion-saludable.png" alt="mujer alimentandose saludable">
+                        </div>
+                    </div>
+                </div>
+                <div class="rightHome">
+                    <div class="tienda">
+                        <div class="imgHome">
+                            <img src="assets/image/tienda-de-suplementos.png" alt="Imagen con varios suplementos">
+                        </div>
+                        <div class="parrafoHome">
+                            <h2 class="subtittle">Encuentra con nosotros la suplementación adecuada para cumplir tus objetivos</h2>
+                            <p>Imagínate más allá de tus limites...
+                                <br>mejor aún, olvídate de ellos.
+                                <br>Suplementación deportiva especializada para mejorar tu rendimiento deportivo.</p>
+                            <div>
+                                <a class="ir-ahora" [routerLink]="['/meals']" routerLinkActive="active">
+                                    Ir a la tienda
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- <section class="exercises-section">
-        <div class="contenedor exercises">
-            <div class="exercises-content">
-                <img class="home-icon" src="/images/Exc-icon.svg" alt="Icono de ejercicios">
-                <h2 class="exercises-title">Ejercicios para tu rutina diaria</h2>
-                <p>El secreto del bombeo perfecto: entrenamiento en la zona de pesos libres.</p>
-                <a [routerLink]="['/exercises']" routerLinkActive="active" class="exercises-button">Ir ahora</a>
-            </div>
-            <div class="exercises-image">
-                <img class="exercises-img" src="/images/Hombre-levantando-peso.png" alt="Hombre levantando peso">
-            </div>
-        </div>
-    </section>
     
-    <section class="meals-section">
-        <div class="contenedor meals">
-            <div class="meals-content">
-                <img class="meals-img" src="/images/Allimentacion-saludable.png" alt="Hombre levantando peso">
-                <img class="home-icon" src="/images/meals-icon.svg" alt="Icono de alimentación saludable">
-                <h2 class="meals-title">Alimentación para tu día a día</h2>
-                <p>La alimentación saludable es uno de los pilares fundamentales para tener unos excelentes hábitos de vida saludables.</p>
-                <a [routerLink]="['/meals']" routerLinkActive="active">Ir ahora</a>
-            </div>
-        </div>
-    </section>  -->
-    <br><br><br><br><br><br><br>
 </main>

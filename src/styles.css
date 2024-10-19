@@ -8,6 +8,7 @@
   --white--: #FFFFFF;
   --Green-Munsell--: #00A878;
   --Eerie-Black--: #0E1725;
+  --Dark-Gunmetal--: #1D2533;;
 
   /* valor estandar de las fuentes*/
   --overall-font-size: 62.5%;
@@ -53,14 +54,18 @@ h4 {
 }
 
 p {
-  font-family: 'Roboto';
   color: var(--white--);
-  font-size: 1.8rem;
-  height: 6rem;
+  font-size: 2rem;
+  font-family: roboto, san sans-serif;
+  font-weight: 200;
+  padding: 1.2rem 0;
+  /* height: 11rem; */
+  padding-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contenedor {
-  max-width: 85%;
+  max-width: 75%;
   width: 100%;
   margin: 0 auto;
 }
@@ -103,7 +108,6 @@ p {
 
 .login-link {
   text-decoration: none;
-  
   color: var(--limerick--);
   border: .2rem solid #A4C400;
   padding: .8rem 3.7rem;
@@ -153,6 +157,8 @@ ul.menu {
 
 
 /** Main Banner Section */
+
+
 
 .abril-fatface-regular {
   font-family: "Abril Fatface", serif;
@@ -233,7 +239,9 @@ img.home-icon {
 }
 
 .exercises-content {
-  flex-basis: 40%;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 a.exercises-button {
@@ -382,31 +390,6 @@ button {
   cursor: pointer;
 }
 
-/**Footer creditos*/
-.footer-container{
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-items: flex-end;
-}
-
-.creditos {
-  padding-top: 2rem;
-  /* background-color: var(--limerick--); */
-  /* display: flex; */
-  list-style: none;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.autores {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.8rem;
-  color: var(--white--);
-  /* padding: 2rem 0; */
-}
-
 /*Pagina de Alimentacion*/
 
 
@@ -515,9 +498,8 @@ img.img-day {
 
 .siguenos {
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  /* align-content: flex-start; */
+  align-items: center;
+  flex-direction: row;
 }
 
 .container-social-media {
@@ -552,183 +534,199 @@ section.form-banner-section {
 
 @media ( max-width: 1400px ) {}
 @media ( max-width: 1200px ) {
-  ul.main-nav {
-      display: none;
-  }
+    ul.main-nav {
+        display: none;
+    }
 }
 @media ( max-width: 992px ) {
-  p.main__banner-paragraph {
-      width: 70%;
-  }
+    p.main__banner-paragraph {
+        width: 70%;
+    }
 }
 @media ( max-width: 768px ) {
-  .contenedor-header {
-      max-width: 90%;
-      justify-content: space-between;
-  }
-  .buttons {
-      display: none;
-  }
-  .hamburger-icon {
-      display: block;
-      height: 4rem;
-  }
-  .menu-icon {
-      display: block;
-  }
-  label.menu-icon {
-      position: absolute;
-      top: 48px;
-      right: 45px;
-  }
-  .menu {
-      display: none;
-      flex-direction: column;
+    .contenedor-header {
+        max-width: 90%;
+        justify-content: space-between;
+    }
+    .buttons {
+        display: none;
+    }
+    .hamburger-icon {
+        display: block;
+        height: 4rem;
+    }
+    .menu-icon {
+        display: block;
+    }
+    label.menu-icon {
+        position: absolute;
+        top: 48px;
+        right: 45px;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    #menu-toggle:checked + .menu{
+        display: flex;
+    }
+    
+    .menu li a {
+        padding: 1rem 3rem;
+        border-bottom: 1px solid #f4f4f4;
+        display: block;
+        text-decoration: none;
+    }
+
+    
+    section.main-banner-section {
+        background-position: -18rem 0; 
+    }
+    .main-banner {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+    .left-banner {
       width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Mostrar el menú cuando el checkbox está marcado */
-  #menu-toggle:checked + .menu{
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
   }
-
-  .menu li a {
-      padding: 1rem 3rem;
-      border-bottom: 1px solid #f4f4f4;
-      display: block;
-      text-decoration: none;
-  }
-
-
-  section.main-banner-section {
-      background-position: -18rem 0;
-  }
-  .main-banner {
-      width: 90%;
-      height: 50rem;
-  }
-  h1 {
+    .right-banner {
+      width: 100%;
+    }
+    img.imgBannerHome {
+      width: 100%;
+      padding-top: 2rem;
+    }
+    h1 {
       font-size: 5rem;
       text-shadow: 0 0 1rem #000;
-  }
-  p.main__banner-paragraph {
-      width: 83%;
-      font-size: 2rem;
-  }
-  .logo-container img {
-      width: rem;
-      height: 5.5rem;
-  }
-  a.main__banner-button {
-      padding: .8rem 1rem;
-      font-size: 1.7rem;
-      border-radius: 1.9rem;
-      width: 20rem;
-  }
-  .exercises {
-      flex-direction: column-reverse;
-      width: 90%;
-  }
-  .exercises-content {
-      margin-bottom: 3rem;
-  }
-  a.exercises-button {
-      padding: 1rem 1rem;
-      font-size: 1.7rem;
-      border-radius: 1.7rem;
-      width: 14rem;
-  }
-  section.meals-section {
-      background-color: #eaebed;
-      background-image: none;
-  }
-  .meals {
-      width: 90%;
-      height: auto;
-  }
-  .meals-content {
-      flex-basis: 100%;
-      margin-bottom: 3rem;
-  }
-  img.meals-img {
-      display: block;
-  }
-  a.meals-button {
-      padding: .5rem 1rem;
-      font-size: 1.7rem;
-      border-radius: 1.7rem;
-      width: 14rem;
-  }
-  .creditos {
-      flex-direction: column;
-      padding: 3rem 0;
-  }
-  .autores {
-      font-size: 1.5rem;
+      line-height: 5rem;
       text-align: center;
-      padding: 0;
-  }
+    }
+    p.main__banner-paragraph {
+        width: 90%;
+        font-size: 2rem;
+        text-align: center;
+    }  
+    .logo-container img {
+        height: 5rem;
+    }
+    a.main__banner-button {
+        padding: .8rem 1rem;
+        font-size: 1.7rem;
+        border-radius: 1.9rem;
+        width: 20rem;
+    }
+    .exercises {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+    .exercises-content {
+        margin-bottom: 3rem;
+    }
+    a.exercises-button {
+        padding: 1rem 1rem;
+        font-size: 1.7rem;
+        border-radius: 1.7rem;
+        width: 14rem;
+    }
+    section.meals-section {
+        background-color: #eaebed;
+        background-image: none;
+    }
+    .meals {
+        width: 90%;
+        height: auto;
+    }
+    .meals-content {
+        flex-basis: 100%;
+        margin-bottom: 3rem;
+    }
+    img.meals-img {
+        display: block;
+    }
+    a.meals-button {
+        padding: .5rem 1rem;
+        font-size: 1.7rem;
+        border-radius: 1.7rem;
+        width: 14rem;
+    }
+    .creditos {
+        flex-direction: column;
+        padding: 3rem 0;
+    }
+    .autores {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 0;
+    }
 
-  /** Exercises */
+    /** Exercises */
 
-  section.exercises-banner-section {
-      background-position: 64rem 0;
-  }
+    section.exercises-banner-section {
+        background-position: 64rem 0;
+    }
 
-  .exercises-banner {
-      width: 90%;
-  }
-  h1.exercises-title {
-      flex-basis: 85%;
-  }
+    .exercises-banner {
+        width: 90%;
+    }
+    h1.exercises-title {
+        flex-basis: 85%;
+    }
 
-  .exercises-routine-container {
-      height: auto;
-      padding: 5rem 0;
-  }
+    .exercises-routine-container {
+        height: auto;
+        padding: 5rem 0;
+    }
 
-  img.img-day {
-      width: 17rem;
-  }
+    img.img-day {
+        width: 17rem;
+    }
 
-  /* Meals landing */
+    /* Meals landing */
 
-  section.meals-banner-section{
-  background-position: 84rem 0;
-  }
+    section.meals-banner-section{
+    background-position: 84rem 0;
+    }
 
-  .meals-banner {
-      width: 90%;
-  }
+    .meals-banner {
+        width: 90%;
+    }
 
-  .meals-days-container{
+    .meals-days-container{
 
-      height: auto;
-      padding: 5rem 0;
-  }
+        height: auto;
+        padding: 5rem 0;    
+    }
 
-  /** formulario y acceso */
+    /** formulario y acceso */
 
-  section.form-banner-section {
-      height: 17rem;
-      background-position: 47rem 0;
-  }
+    section.form-banner-section {
+        height: 17rem;
+        background-position: 47rem 0;
+    } 
+    
+    .form-container {
+        width: 90%;
+        padding: 3rem 0;
+    }
 
-  .form-container {
-      width: 90%;
-      padding: 3rem 0;
-  }
-
-  .text-form {
-      text-shadow: none;
-      text-align: center;
-  }
+    .text-form {
+        text-shadow: none;
+        text-align: center;
+    }
 
 }
 @media ( max-width: 567px ) {}
-

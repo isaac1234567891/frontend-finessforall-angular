@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { RegisterComponent } from '../register/register.component';
 import data from '../../data/data.json';
@@ -12,5 +12,4 @@ import data from '../../data/data.json';
 })
 export class HomeComponent {
   ads=data
-
 }
