@@ -1,9 +1,10 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of, pipe, tap, map } from 'rxjs';
 import { User } from '../interfaces/user';
 import { Response } from '../interfaces/response';
 import { Router } from '@angular/router';
+import { captureError } from 'rxjs/internal/util/errorContext';
 @Injectable({
   providedIn: 'root'
 })
@@ -59,6 +60,28 @@ export class AuthService {
         })
 
       );
+  }
+  verifyAuthUser() : Observable <boolean> {
+    const token = localStorage.getItem('token') || '';
+    const headers = new HttpHeaders().set('X-Token', token);
+    return this.http.get<Response>('http://localhost:3000/api/auth/re-new-token', {headers})
+    .pipe(
+      tap( (data) => {
+        console.log(data)
+        if(data.token){
+          localStorage.setItem('token', data.token)
+        }
+        else{
+          localStorage.removeItem('token')
+        }
+      }),
+      map ( (data) => {
+        return data.ok
+      } ),
+      catchError( (error) => {
+        return of (false)
+      } )
+    );
   }
   // getUser () {
   //   return this.http.get( 'http://localhost:3000/api/auth/')

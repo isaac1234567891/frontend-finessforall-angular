@@ -6,17 +6,18 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { authGuard } from './guards/auth.guard';
 
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: 'exercises', component: ExercisesComponent},
-  { path: 'meals', component: MealsComponent},
+  { path: 'exercises', component: ExercisesComponent,canActivate: [authGuard]},
+  { path: 'meals', component: MealsComponent, canActivate: [authGuard]},
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   { path: '404', component: PageNotFoundComponent},
-  { path: 'dashboard/admin', component: DashboardComponent},
+  { path: 'dashboard/admin', component: DashboardComponent, canActivate: [authGuard]},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', redirectTo: '404', pathMatch: 'full'}
 ];
