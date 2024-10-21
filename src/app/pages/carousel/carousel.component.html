@@ -1,0 +1,20 @@
+<div class="carousel-container">
+    <div class="carousel-wrapper" [style.transform]="'translateX(' + currentSlide * -100 + '%)'">
+      <div *ngFor="let item of ads; let i = index" class="slide">
+        <div class="contenedor main-banner">
+          <div class="left-banner">
+            <h1 class="main__banner-title">{{item.tittle}}</h1>
+            <p class="main__banner-paragraph">{{item.description}}</p>
+            <a class="main__banner-button" [routerLink]="['/register']" routerLinkActive="active">Regístrate ahora</a>
+          </div>
+          <div class="right-banner">
+            <img src="assets/image/fitness-for-all-banner-register.png" alt="mujer practicando crossfit con sogas">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="prev" (click)="prevSlide()">&#10094;</button>
+    <button class="next" (click)="nextSlide()">&#10095;</button>
+  </div>
