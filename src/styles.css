@@ -27,6 +27,7 @@ html {
 body {
   font-family: "Abril Fatface", serif;
   font-family: "Roboto", sans-serif;
+  color: #fff;
 }
 
 h1 {
@@ -335,7 +336,7 @@ a.main__banner-button {
 }
 .text-form2 {
   margin-bottom: 3.5rem;
-  color: var(--black--);
+  color: var(--white--);
   font-family: "Roboto", sans-serif;
 }
 .main-banner {
@@ -384,11 +385,12 @@ button {
 
 /**Footer creditos*/
 .footer-container{
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-items: flex-end;
+  background-color: #A4C400;
 }
 
 .creditos {
@@ -731,4 +733,3 @@ section.form-banner-section {
 
 }
 @media ( max-width: 567px ) {}
-

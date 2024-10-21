@@ -93,8 +93,8 @@
     }
     </div>
 
-    <label for="grupomuscular"> * Grupo Muscular</label>
-    <input type="text" placeholder="grupomuscular" formControlName="grupomuscular" id="muscleGroup">
+    <label for="muscleGroup"> * Grupo Muscular</label>
+    <input type="text" placeholder="grupomuscular" formControlName="muscleGroup" id="muscleGroup">
     <div class="error">
     @if( formData.get( 'grupomuscular' )?.invalid && ( formData.get( 'grupomuscular' )?.dirty || formData.get( 'grupomuscular' )?.touched )) {
     @if ( formData.get( 'grupomuscular' )?.errors?.[ 'required' ] ) {
