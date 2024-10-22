@@ -14,11 +14,11 @@ constructor(private request: HttpClient) { }
 
 registerRoutines(newRoutines: Routine): Observable<any> {
 return this.request.post<Response>('http://localhost:3000/api/routine', newRoutines)
-.pipe(
-tap((data) => {
-console.log(data);
-}),
-map((data) => data) // Asegúrate de que esta propiedad exista
-);
-}
+  .pipe(
+  tap((data) => {
+  console.log(data);
+  }),
+  map((data) => data) // Asegúrate de que esta propiedad exista
+  );
+  }
 }

@@ -25,6 +25,7 @@
       </ul>
       </nav>
       <div class="buttons">
+        @if(!userData) {
           <div>
               <a class="inscribirse-link" [routerLink]="['/register']" routerLinkActive="active">
                   Registrarme
@@ -35,11 +36,14 @@
                   Acceder
               </a>
           </div>
-          <div>
-            <a class="inscribirse-link" [routerLink]="['/home']" routerLinkActive="active">
-                dashboard
-            </a>
-        </div>
+        }
+          @if(userData){
+            <div>
+              <span class="login-link" (click)="logout()">
+                  Cerrar seccion
+              </span>
+            </div>
+          }
       </div>
       <nav class="menu-container">
           <!-- Checkbox para controlar el menú -->
@@ -70,9 +74,9 @@
                   </a>
               </li>
           </ul>
-          @if (authUser) {
-            <!-- <pre>{{authUser|json}}</pre> -->
-            <span> hola, {{authUser.name}}</span>
+          @if (userData) {
+            <!-- <pre>{{|json}}</pre> -->
+            <span> hola, {{userData.name}}</span>
           }
       </nav>
   </div>

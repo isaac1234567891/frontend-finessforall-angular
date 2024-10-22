@@ -50,7 +50,7 @@ h4 {
   font-size: 1.8rem;
   font-family: 'Roboto';
   font-weight: 400;
-  color: var(--limerick--); 
+  color: var(--limerick--);
 }
 
 p {
@@ -107,7 +107,7 @@ label{
 
 .login-link {
   text-decoration: none;
-
+  cursor: pointer;
   color: var(--limerick--);
   border: .2rem solid #A4C400;
   padding: .8rem 3.7rem;
