@@ -28,6 +28,7 @@ html {
 body {
   font-family: "Abril Fatface", serif;
   font-family: "Roboto", sans-serif;
+  color: #fff;
 }
 
 h1 {
@@ -50,7 +51,7 @@ h4 {
   font-size: 1.8rem;
   font-family: 'Roboto';
   font-weight: 400;
-  color: var(--limerick--); 
+  color: var(--limerick--);
 }
 
 p {
@@ -64,6 +65,9 @@ p {
   margin-bottom: 1rem;
 }
 
+label{
+  color: var(--white--);
+}
 .contenedor {
   max-width: 75%;
   width: 100%;
@@ -108,6 +112,10 @@ p {
 
 .login-link {
   text-decoration: none;
+<<<<<<< HEAD
+=======
+  cursor: pointer;
+>>>>>>> a16ec611d49bd3e18c4a3b870556ea63189bb8e1
   color: var(--limerick--);
   border: .2rem solid #A4C400;
   padding: .8rem 3.7rem;
@@ -343,7 +351,7 @@ a.main__banner-button {
 }
 .text-form2 {
   margin-bottom: 3.5rem;
-  color: var(--black--);
+  color: var(--white--);
   font-family: "Roboto", sans-serif;
 }
 .main-banner {
@@ -377,7 +385,9 @@ input, select {
   border: .1rem solid #ccc;
   border-radius: .5rem;
 }
-
+.required-field{
+  color: var(--white--);
+}
 button {
   padding: 1rem;
   border-radius: 2rem;
@@ -390,6 +400,35 @@ button {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+/**Footer creditos*/
+.footer-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-end;
+  background-color: #A4C400;
+}
+
+.creditos {
+  padding-top: 2rem;
+  /* background-color: var(--limerick--); */
+  /* display: flex; */
+  list-style: none;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.autores {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  color: var(--white--);
+  /* padding: 2rem 0; */
+}
+
+>>>>>>> a16ec611d49bd3e18c4a3b870556ea63189bb8e1
 /*Pagina de Alimentacion*/
 
 
@@ -614,6 +653,7 @@ section.form-banner-section {
       text-shadow: 0 0 1rem #000;
       line-height: 5rem;
       text-align: center;
+
     }
     p.main__banner-paragraph {
         width: 90%;

@@ -3,6 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { RegisterComponent } from '../register/register.component';
 import data from '../../data/data.json';
 
+
 @Component({
   selector: 'app-home',
   standalone: true,

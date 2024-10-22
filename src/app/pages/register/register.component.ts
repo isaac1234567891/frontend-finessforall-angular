@@ -21,14 +21,19 @@ export class RegisterComponent {
     username: new FormControl( '', [Validators.required, Validators.email]),
     password: new FormControl( '', [Validators.required, Validators.minLength(8), Validators.maxLength(20)])
   });
+  message: string|undefined;
 
   constructor( private authService: AuthService) {}
 
   handleSubmit() {
     if(this.formData.valid){
       console.log(this.formData.value);
-      this.authService.registerUser(this.formData.value).subscribe( function ( data ) {
+      this.authService.registerUser(this.formData.value).subscribe( ( data ) => {
         console.log(data);
+        this.message = data;
+        setTimeout(() => {
+          this.message = '';
+        }, 2000);
       });
       this.formData.reset();
     }
