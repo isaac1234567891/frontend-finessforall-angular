@@ -112,10 +112,7 @@ label{
 
 .login-link {
   text-decoration: none;
-<<<<<<< HEAD
-=======
   cursor: pointer;
->>>>>>> a16ec611d49bd3e18c4a3b870556ea63189bb8e1
   color: var(--limerick--);
   border: .2rem solid #A4C400;
   padding: .8rem 3.7rem;
@@ -400,38 +397,6 @@ button {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
-/**Footer creditos*/
-.footer-container{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-items: flex-end;
-  background-color: #A4C400;
-}
-
-.creditos {
-  padding-top: 2rem;
-  /* background-color: var(--limerick--); */
-  /* display: flex; */
-  list-style: none;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.autores {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.8rem;
-  color: var(--white--);
-  /* padding: 2rem 0; */
-}
-
->>>>>>> a16ec611d49bd3e18c4a3b870556ea63189bb8e1
-/*Pagina de Alimentacion*/
-
-
 /** Meals Banner Section */
 
 section.meals-banner-section {
@@ -583,6 +548,11 @@ section.form-banner-section {
     }
 }
 @media ( max-width: 768px ) {
+
+    .hamburger-icon {
+      width: 60%;
+    }
+
     .contenedor-header {
         max-width: 90%;
         justify-content: space-between;
