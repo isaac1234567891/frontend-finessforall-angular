@@ -587,17 +587,18 @@ section.form-banner-section {
     #menu-toggle:checked + .menu{
         display: flex;
     }
-    
-    .menu li a {
+
+    .menu li a,
+    .menu li span {
         padding: 1rem 3rem;
         border-bottom: 1px solid #f4f4f4;
         display: block;
         text-decoration: none;
     }
 
-    
+
     section.main-banner-section {
-        background-position: -18rem 0; 
+        background-position: -18rem 0;
     }
     .main-banner {
         flex-direction: column;
@@ -629,7 +630,7 @@ section.form-banner-section {
         width: 90%;
         font-size: 2rem;
         text-align: center;
-    }  
+    }
     .logo-container img {
         height: 5rem;
     }
@@ -719,7 +720,7 @@ section.form-banner-section {
     .meals-days-container{
 
         height: auto;
-        padding: 5rem 0;    
+        padding: 5rem 0;
     }
 
     /** formulario y acceso */
@@ -727,8 +728,8 @@ section.form-banner-section {
     section.form-banner-section {
         height: 17rem;
         background-position: 47rem 0;
-    } 
-    
+    }
+
     .form-container {
         width: 90%;
         padding: 3rem 0;

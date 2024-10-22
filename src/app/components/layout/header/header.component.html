@@ -1,83 +1,97 @@
 <header class="header">
   <div class="contenedor contenedor-header">
-      <div class="logo-container">
-          <a [routerLink]="['/home']" routerLinkActive="active">
-              <img src="assets/image/f4a-logo.svg" alt="F4A">
-          </a>
-      </div>
-      <nav>
+    <div class="logo-container">
+      <a [routerLink]="['/home']" routerLinkActive="active">
+        <img src="assets/image/f4a-logo.svg" alt="F4A">
+      </a>
+    </div>
+    <nav>
       <ul class="main-nav">
-          <li>
-              <a class="anchor-link" [routerLink]="['exercises']" routerLinkActive="active">
-                  Rutinas
-              </a>
-          </li>
-          <li>
-              <a class="anchor-link" [routerLink]="['/meals']" routerLinkActive="active">
-                  Alimentación
-              </a>
-          </li>
-          <li>
-            <a class="anchor-link" [routerLink]="['/supplements']" routerLinkActive="active">
-                Suplementación
-            </a>
+        <li>
+          <a class="anchor-link" [routerLink]="['exercises']" routerLinkActive="active">
+            Rutinas
+          </a>
+        </li>
+        <li>
+          <a class="anchor-link" [routerLink]="['/meals']" routerLinkActive="active">
+            Alimentación
+          </a>
+        </li>
+        <li>
+          <a class="anchor-link" [routerLink]="['/supplements']" routerLinkActive="active">
+            Suplementación
+          </a>
         </li>
       </ul>
-      </nav>
-      <div class="buttons">
-        @if(!userData) {
-          <div>
-              <a class="inscribirse-link" [routerLink]="['/register']" routerLinkActive="active">
-                  Registrarme
-              </a>
-          </div>
-          <div>
-              <a class="login-link" [routerLink]="['/login']" routerLinkActive="active">
-                  Acceder
-              </a>
-          </div>
-        }
-          @if(userData){
-            <div>
-              <span class="login-link" (click)="logout()">
-                  Cerrar seccion
-              </span>
-            </div>
-          }
+    </nav>
+    <div class="buttons">
+      @if(!userData) {
+      <div>
+        <a class="inscribirse-link" [routerLink]="['/register']" routerLinkActive="active">
+          Registrarme
+        </a>
       </div>
-      <nav class="menu-container">
-          <!-- Checkbox para controlar el menú -->
-          <label for="menu-toggle" class="menu-icon">
-              <img src="assets/image/hamburguer-menu.svg" alt="menu-icon" class="hamburger-icon">
-          </label>
-          <input type="checkbox" id="menu-toggle">
-          <!-- Menú -->
-          <ul class="menu">
-              <li>
-                  <a href="exercises.html">
-                      Ejercicios para tu rutina diaria
-                  </a>
-              </li>
-              <li>
-                  <a href="meals.html">
-                      Alimentacion para tu dia a dia
-                  </a>
-              </li>
-              <li>
-                  <a href="formulario.html" class="inscribirse-lin">
-                      Inscribirse
-                  </a>
-              </li>
-              <li>
-                  <a href="acceso.html" class="acceso-lin">
-                      Acceso
-                  </a>
-              </li>
-          </ul>
-          @if (userData) {
-            <!-- <pre>{{|json}}</pre> -->
-            <span> hola, {{userData.name}}</span>
-          }
-      </nav>
+      <div>
+        <a class="login-link" [routerLink]="['/login']" routerLinkActive="active">
+          Acceder
+        </a>
+      </div>
+      }
+      @if(userData){
+      <div>
+        <span class="login-link" (click)="logout()">
+          Cerrar sesion
+        </span>
+      </div>
+      }
+    </div>
+    <nav class="menu-container">
+      <!-- Checkbox para controlar el menú -->
+      <label for="menu-toggle" class="menu-icon">
+        <img src="assets/image/hamburguer-menu.svg" alt="menu-icon" class="hamburger-icon">
+      </label>
+      <input type="checkbox" id="menu-toggle">
+      <!-- Menú -->
+      <ul class="menu">
+        <li>
+          <a class="anchor-link" [routerLink]="['exercises']" routerLinkActive="active">
+            Rutinas
+          </a>
+        </li>
+        <li>
+          <a class="anchor-link" [routerLink]="['/meals']" routerLinkActive="active">
+            Alimentación
+          </a>
+        </li>
+        <li>
+          <a class="anchor-link" [routerLink]="['/supplements']" routerLinkActive="active">
+            Suplementación
+          </a>
+        </li>
+        @if(!userData) {
+        <li>
+          <a [routerLink]="['/register']" routerLinkActive="active">
+            Registrarme
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/login']" routerLinkActive="active">
+            Acceder
+          </a>
+        </li>
+        }
+        @if(userData){
+        <li>
+          <span class="anchor-link" (click)="logout()">
+            Cerrar sesion
+          </span>
+        </li>
+        }
+      </ul>
+      @if (userData) {
+      <!-- <pre>{{|json}}</pre> -->
+      <span> hola, {{userData.name}}</span>
+      }
+    </nav>
   </div>
 </header>
