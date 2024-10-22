@@ -635,6 +635,7 @@ section.form-banner-section {
     }
     .exercises-content {
         margin-bottom: 3rem;
+        flex-direction: column;
     }
     a.exercises-button {
         padding: 1rem 1rem;
