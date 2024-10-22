@@ -595,7 +595,9 @@ section.form-banner-section {
         display: block;
         text-decoration: none;
     }
-
+    span {
+      padding: 10rem;
+    }
 
     section.main-banner-section {
         background-position: -18rem 0;
