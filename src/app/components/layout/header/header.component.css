@@ -1,0 +1,50 @@
+
+.main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.main-nav li {
+  position: relative;
+  margin-right: 2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.main-nav .dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--Eerie-Black--);
+  list-style: none;
+  padding: 0;
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background-color: var(--Eerie-Black--);
+}
+@media ( min-width: 768px){
+  .main-nav {
+    display: flex;
+  }
+}

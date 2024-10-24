@@ -10,9 +10,9 @@
     <small>El campo 'name' es obligatorio</small>
     } }
     </div>
-    
+
     <label for="imagen">* Imagen</label>
-    <input type="text" placeholder="imagen" id="imagen" formControlName="imagen"/>
+    <input type="text" placeholder="imagen" id="imagen" formControlName="image"/>
     <div class="error">
     @if( formData.get( 'imagen' )?.invalid && ( formData.get( 'imagen'
     )?.dirty || formData.get( 'imagen' )?.touched )) { @if ( formData.get(
@@ -20,7 +20,7 @@
     <small>El campo 'image' es obligatorio</small>
     } }
     </div>
-    
+
     <label for="ingredients">* Ingredientes</label>
     <input type="text" placeholder="ingredients" id="ingredients" formControlName="ingredients"/>
     <div class="error">
@@ -30,7 +30,7 @@
     <small>El campo 'ingredients' es obligatorio</small>
     } }
     </div>
-    
+
     <label for="instructions">* instrucciones</label>
     <input type="text" placeholder="instructions" id="instructions" formControlName="instructions"/>
     <div class="error">
@@ -40,7 +40,7 @@
     <small>El campo 'instrucciones' es obligatorio</small>
     } }
     </div>
-    
+
     <label for="calories">* Calorías en Gramos</label>
     <input type="number" min="0" placeholder="calories" id="calories" formControlName="calories"/>
     <div class="error">
@@ -86,9 +86,10 @@
     <small>El campo 'fiber' es obligatorio</small>
     } }
     </div>
-    
+
     <p>*Campos obligatorios</p>
     <br />
     <button type="submit" [disabled]="formData.invalid">Regisrar</button>
     </form>
-    </section>
+</section>
+

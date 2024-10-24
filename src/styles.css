@@ -594,6 +594,7 @@ section.form-banner-section {
         border-bottom: 1px solid #f4f4f4;
         display: block;
         text-decoration: none;
+        cursor: pointer;
     }
     span {
       padding: 10rem;

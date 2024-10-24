@@ -1,16 +1,26 @@
 import { Component} from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { RegisterComponent } from '../register/register.component';
 import data from '../../data/data.json';
+import { MealsService } from '../../service/meals.service';
+import { CommonModule } from '@angular/common';
+import { BanerComponent } from "../baner/baner.component";
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, RegisterComponent],
+  imports: [CommonModule, BanerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  ads=data
+  Meals: any
+  constructor(private MealsService: MealsService) {
+
+  }
+  ngOnInt():void {
+    this.MealsService.getAllMeals().subscribe( (data) => {
+      console.log(data)
+      this.Meals = data.data
+    } )
+  }
 }

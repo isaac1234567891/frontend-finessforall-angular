@@ -8,6 +8,7 @@ import { SupplementsComponent } from './pages/supplements/supplements.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { authGuard } from './guards/auth.guard';
+import { MealsListComponent } from './pages/meals-list/meals-list.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -15,6 +16,7 @@ export const routes: Routes = [
   { path: 'supplements', component: SupplementsComponent, canActivate: [authGuard]},
   { path: 'exercises', component: RoutinesComponent, canActivate: [authGuard]},
   { path: 'meals', component: MealsComponent, canActivate: [authGuard]},
+  { path: 'meals-list', component: MealsListComponent, canActivate: [authGuard]},
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   { path: '404', component: PageNotFoundComponent},
