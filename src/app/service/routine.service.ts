@@ -13,7 +13,7 @@ export class RoutineService {
 constructor(private request: HttpClient) { }
 
 registerRoutines(newRoutines: Routine): Observable<any> {
-return this.request.post<Response>('http://localhost:3000/api/routine', newRoutines)
+return this.request.post<Response>('http://localhost:3000/api/routines', newRoutines)
   .pipe(
   tap((data) => {
   console.log(data);
