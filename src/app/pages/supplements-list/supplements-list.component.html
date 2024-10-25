@@ -1,0 +1,26 @@
+<table border="1">
+  <thead>
+      <tr>
+          <th>imagen</th>
+          <th>suplemento</th>
+          <th>descripcion</th>
+          <th>cantidad</th>
+          <th>precio</th>
+      </tr>
+  </thead>
+  <tbody>
+      @for ( item of suplements; track $index) {
+          <tr>
+              <td>{{ item.urlImage }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.description }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.price | currency }}</td>
+              <td>
+                  <a href="#">Editar</a>
+                  <a href="#">Eliminar</a>
+              </td>
+          </tr>
+      }
+  </tbody>
+</table>

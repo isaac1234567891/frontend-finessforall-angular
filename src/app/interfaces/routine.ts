@@ -9,5 +9,4 @@ export interface Routine {
     averageSetstHypertrophy: number,
     description: string,
     muscleGroup: string,
-    }
-    
+}

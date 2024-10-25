@@ -19,7 +19,7 @@ export class MealsService {
   }
 
   registerMeals ( newMeals: Meals ){
-  return this.http.post<any>( 'http://localhost:3000/api/recipes', newMeals, {headers: this.headers} );
+  return this.http.post( 'http://localhost:3000/api/recipes', newMeals, {headers: this.headers} );
   }
 
 
