@@ -12,11 +12,12 @@ export class AuthService {
 
   constructor( private http: HttpClient, private router: Router) { }
 
-  // Getters
   get userData(): User | null {
-    const storedData = localStorage.getItem('authUserData');
+    const storedData = localStorage.getItem('authUserData') || null;
 
-    return this._authUserData || ( storedData && storedData !== 'undefined' ? JSON.parse(storedData) : null );
+    // Verifica si storedData no es null ni undefined, además si el contenido es válido JSON
+    this._authUserData = storedData ? JSON.parse( storedData ) : null;
+    return this._authUserData;
   }
 
   //credenciales { User }
@@ -40,7 +41,6 @@ export class AuthService {
     return this.http.post<Response>( 'http://localhost:3000/api/auth/login', user )
       .pipe(
         tap( ( data ) => {
-          console.log( data );
           if( data.token ){
 
             if( data.data){
@@ -68,13 +68,9 @@ export class AuthService {
   }
 
   logoutUser(): Observable<boolean> {
-    console.log("hola")
-    if( this._authUserData ) {
-      console.log("first")
       this._authUserData = null;                  // Elimina datos del usuario autenticado en el Servicio
       localStorage.removeItem( 'token' );         // Elimina token del LocalStorage
       localStorage.removeItem( 'authUserData' );  // Elimina datos del usuario autenticado en el LocalStorage
-    }
 
     return of( true );
   }

@@ -1,0 +1,38 @@
+<table border="1">
+  <thead>
+      <tr>
+          <th>imagen</th>
+          <th>nombre de la rutina</th>
+          <th>repetitionsStrength</th>
+          <th>averageSetsStrenght</th>
+          <th>repetitionsEndurance</th>
+          <th>averageSetsEndurance</th>
+          <th>repetitionsHypertrophy</th>
+          <th>averageSetsHypertrophy</th>
+          <th>descripcion</th>
+          <th>grupo Muscular</th>
+  </thead>
+  <tbody>
+      @for ( item of routines; track $index) {
+          <tr>
+              <td>{{ item.UrlImage }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.repetitionsStrength }}</td>
+              <td>{{ item.averageSetsStrength }}</td>
+              <td>{{ item.repetitionsEndurance }}</td>
+              <td>{{ item.averageSetsEndurance }}</td>
+              <td>{{ item.repetitionsHypertrophy }}</td>
+              <td>{{ item.averageSetstHypertrophy }}</td>
+              <td>{{ item.description }}</td>
+              <td>{{ item.muscleGroup }}</td>
+              <td>
+                  <a href="#">Editar</a>
+                  <a href="#">Eliminar</a>
+              </td>
+          </tr>
+      }
+  </tbody>
+</table>
+
+
+

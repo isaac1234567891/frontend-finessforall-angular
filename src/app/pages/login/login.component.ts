@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChange } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../service/auth.service';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -13,17 +14,22 @@ import { Route, Router } from '@angular/router';
 export class LoginComponent {
   formData: FormGroup;
   message: string|boolean|undefined;
+  subscription!: Subscription;
   constructor( private authService: AuthService, private router: Router) {
     this.formData = new FormGroup({
       username: new FormControl( '', [Validators.required, Validators.email]),
       password: new FormControl( '', [Validators.required, Validators.minLength(8), Validators.maxLength(20)])
     });
   }
-
+  ngOnDestroy( ): void {
+    if(this.subscription){
+      this.subscription.unsubscribe();
+    }
+  }
   handleSubmit() {
     if( this.formData.valid ) {
       console.log(this.formData.value);
-      this.authService.loginUser(this.formData.value).subscribe( (data: string|boolean|undefined ) =>{
+      this.subscription = this.authService.loginUser(this.formData.value).subscribe( (data: string|boolean|undefined ) =>{
         console.log( data );
 
         if ( typeof data === 'string' ) {

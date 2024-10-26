@@ -7,21 +7,62 @@
     </div>
     <nav>
       <ul class="main-nav">
-        <li>
-          <a class="anchor-link" [routerLink]="['exercises']" routerLinkActive="active">
-            Rutinas
-          </a>
-        </li>
-        <li>
-          <a class="anchor-link" [routerLink]="['/meals']" routerLinkActive="active">
-            Alimentación
-          </a>
-        </li>
-        <li>
-          <a class="anchor-link" [routerLink]="['/supplements']" routerLinkActive="active">
-            Suplementación
-          </a>
-        </li>
+        @if(!userData) {
+          <li>
+            <a class="anchor-link" [routerLink]="['exercises']" routerLinkActive="active">
+              Rutinas
+            </a>
+          </li>
+          <li>
+            <a class="anchor-link" [routerLink]="['/meals']" routerLinkActive="active">
+              Alimentación
+            </a>
+          </li>
+          <li>
+            <a class="anchor-link" [routerLink]="['/supplements']" routerLinkActive="active">
+              Suplementación
+            </a>
+          </li>
+        }
+
+        @if(userData) {
+          <li class="dropdown">
+            <a class="anchor-link" [routerLink]="['exercises']" routerLinkActive="active">
+              Rutinas
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="anchor-link" [routerLink]="['exercises-list']" routerLinkActive="active">
+                  lista de Rutinas
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="anchor-link" [routerLink]="['/meals']" routerLinkActive="active">
+              Alimentación
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="anchor-link" [routerLink]="['meals-list']" routerLinkActive="active">
+                  lista de alimentacion
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="anchor-link" [routerLink]="['/supplements']" routerLinkActive="active">
+              Suplementación
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="anchor-link" [routerLink]="['supplements-list']" routerLinkActive="active">
+                  lista de Suplementación
+                </a>
+              </li>
+            </ul>
+          </li>
+        }
       </ul>
     </nav>
     <div class="buttons">
@@ -53,21 +94,61 @@
       <input type="checkbox" id="menu-toggle">
       <!-- Menú -->
       <ul class="menu">
-        <li>
-          <a class="anchor-link" [routerLink]="['exercises']" routerLinkActive="active">
-            Rutinas
-          </a>
-        </li>
-        <li>
-          <a class="anchor-link" [routerLink]="['/meals']" routerLinkActive="active">
-            Alimentación
-          </a>
-        </li>
-        <li>
-          <a class="anchor-link" [routerLink]="['/supplements']" routerLinkActive="active">
-            Suplementación
-          </a>
-        </li>
+        @if (!userData) {
+          <li>
+            <a class="anchor-link" [routerLink]="['exercises']" routerLinkActive="active">
+              Rutinas
+            </a>
+          </li>
+          <li>
+            <a class="anchor-link" [routerLink]="['/meals']" routerLinkActive="active">
+              Alimentación
+            </a>
+          </li>
+          <li>
+            <a class="anchor-link" [routerLink]="['/supplements']" routerLinkActive="active">
+              Suplementación
+            </a>
+          </li>
+        }
+        @if(userData) {
+          <li class="dropdown">
+            <a class="anchor-link" [routerLink]="['exercises']" routerLinkActive="active">
+              Rutinas
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="anchor-link" [routerLink]="['routines-list']" routerLinkActive="active">
+                  lista de Rutinas
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="anchor-link" [routerLink]="['/meals']" routerLinkActive="active">
+              Alimentación
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="anchor-link" [routerLink]="['meals-list']" routerLinkActive="active">
+                  lista de alimentacion
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="anchor-link" [routerLink]="['/supplements']" routerLinkActive="active">
+              Suplementación
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="anchor-link" [routerLink]="['supplements-list']" routerLinkActive="active">
+                  lista de Suplementación
+                </a>
+              </li>
+            </ul>
+          </li>
+        }
         @if(!userData) {
         <li>
           <a [routerLink]="['/register']" routerLinkActive="active">
@@ -88,6 +169,7 @@
         </li>
         }
       </ul>
+
       @if (userData) {
         <!-- <pre>{{|json}}</pre> -->
         <span> hola, {{userData.name}}</span>
