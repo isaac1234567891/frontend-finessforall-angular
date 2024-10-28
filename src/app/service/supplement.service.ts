@@ -19,4 +19,7 @@ export class SupplementsService {
   registerSupplements(newSupplements: Supplements){
     return this.request.post('http://localhost:3000/api/supplements', newSupplements, {headers: this.headers})
   }
+  deleteSupplements( id: any ) {
+    return this.request.delete(`http://localhost:3000/api/supplements/${id}`,{headers: this.headers});
+   }
 }
