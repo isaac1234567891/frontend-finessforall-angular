@@ -11,6 +11,9 @@ import { authGuard } from './guards/auth.guard';
 import { MealsListComponent } from './pages/meals-list/meals-list.component';
 import { RoutinesListComponent } from './pages/routines-list/routines-list.component';
 import { SupplementsListComponent } from './pages/supplements-list/supplements-list.component';
+import { RoutinesListEditComponent } from './pages/routines-list-edit/routines-list-edit.component';
+import { SupplementsListEditComponent } from './pages/supplements-list-edit/supplements-list-edit.component';
+import { MealsListEditComponent } from './pages/meals-list-edit/meals-list-edit.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -25,6 +28,9 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: '404', component: PageNotFoundComponent},
   { path: 'dashboard/admin', component: DashboardComponent, canActivate: [authGuard]},
+  { path: 'routines/edit/:id',component: RoutinesListEditComponent, canActivate: [authGuard]},
+  { path: 'supplements/edit',component: SupplementsListEditComponent, canActivate: [authGuard]},
+  { path: 'meals/edit',component: MealsListEditComponent, canActivate: [authGuard]},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', redirectTo: '404', pathMatch: 'full'}
 ];

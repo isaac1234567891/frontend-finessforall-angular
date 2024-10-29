@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RoutineService } from '../../service/routine.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-routines-list',
@@ -11,7 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class RoutinesListComponent {
   routines: any[] = [];
-  constructor(private routinesService: RoutineService) {}
+  constructor(private routinesService: RoutineService, 
+    private router: Router
+  ) {}
   ngOnInit() {
     this.loadData();
   }
@@ -25,6 +28,8 @@ export class RoutinesListComponent {
 
   editar(id: any) {
     console.log(`editar producto ${id}`);
+    this.router.navigateByUrl(`routines/edit/${id}`);
+
   }
   eliminar(id: any) {
     console.log(`eliminar producto ${id}`);
