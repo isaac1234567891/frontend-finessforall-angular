@@ -5,10 +5,10 @@
     (ngSubmit)="handleSubmit()"
     >
     <label for="image"> Imagen </label>
-    <input type="" placeholder="image" id="image" formControlName="urlImage">
+    <input type="" placeholder="image" id="image" formControlName="image">
     <div class="error">
-    @if( formData.get( 'urlImage' )?.invalid && (formData.get( 'urlImage' )?.dirty || formData.get('urlImage')?.touched)){
-    @if ( formData.get( 'urlImage' )?.errors?.[ 'required' ] ) {
+    @if( formData.get( 'image' )?.invalid && (formData.get( 'image' )?.dirty || formData.get('image')?.touched)){
+    @if ( formData.get( 'image' )?.errors?.[ 'required' ] ) {
     <small>El campo 'imagen' es obligatorio</small>
     }
     }

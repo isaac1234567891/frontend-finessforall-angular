@@ -15,7 +15,7 @@ styleUrl: './routines.component.css'
 export class RoutinesComponent {
   formData: FormGroup = new FormGroup(
   {
-    urlImage: new FormControl( '', [Validators.required]),
+    image: new FormControl( '', [Validators.required]),
     name: new FormControl( '', [Validators.required]),
     repetitionsStrength: new FormControl( '', [Validators.required]),
     averageSetsStrength: new FormControl( '', [Validators.required]),
