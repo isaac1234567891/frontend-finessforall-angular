@@ -29,8 +29,8 @@ export const routes: Routes = [
   { path: '404', component: PageNotFoundComponent},
   { path: 'dashboard/admin', component: DashboardComponent, canActivate: [authGuard]},
   { path: 'routines/edit/:id',component: RoutinesListEditComponent, canActivate: [authGuard]},
-  { path: 'supplements/edit',component: SupplementsListEditComponent, canActivate: [authGuard]},
-  { path: 'meals/edit',component: MealsListEditComponent, canActivate: [authGuard]},
+  { path: 'supplements/edit/:id',component: SupplementsListEditComponent, canActivate: [authGuard]},
+  { path: 'meals/edit/:id',component: MealsListEditComponent, canActivate: [authGuard]},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', redirectTo: '404', pathMatch: 'full'}
 ];

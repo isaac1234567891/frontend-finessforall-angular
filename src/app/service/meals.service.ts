@@ -28,4 +28,15 @@ export class MealsService {
     return this.request.delete(`http://localhost:3000/api/recipes/${id}`,
     {headers: this.headers});
   }
+  getMealsbyId(id: any) {
+    return this.request.get<any>(`http://localhost:3000/api/recipes/${id}`);
+  }
+
+  updateMeals(id: any, updateMeals: any) {
+    return this.request.patch <any>(
+      `http://localhost:3000/api/recipes/${id}`,
+      updateMeals,
+      { headers: this.headers }
+    );
+  }
 }

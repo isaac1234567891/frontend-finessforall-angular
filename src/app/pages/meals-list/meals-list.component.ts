@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MealsService } from '../../service/meals.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-meals-list',
@@ -11,20 +13,24 @@ import { CommonModule } from '@angular/common';
 })
 export class MealsListComponent {
   meals: any[] = [];
-  constructor(private mealsService: MealsService) {}
+  constructor(private mealsService: MealsService,
+    private router: Router
+  ) {}
   ngOnInit() {
     this.loadData();
   }
 
   loadData() {
-    this.mealsService.getAllMeals().subscribe((data) => {
-      console.log(data);
-      this.meals = data.data;
+    this.mealsService.getAllMeals().subscribe((meals) => {
+      console.log(meals);
+      this.meals = meals.data;
     });
   }
 
   editar(id: any) {
     console.log(`editar receta ${id}`);
+    this.router.navigateByUrl(`meals/edit/${id}`);
+
   }
   eliminar(id: any) {
     console.log(`eliminar receta ${id}`);

@@ -36,7 +36,7 @@ export class RoutineService {
   }
 
   updateRoutine(id: any, updatedRoutine: any) {
-    return this.request.patch(
+    return this.request.patch <any>(
       `http://localhost:3000/api/routines/${id}`,
       updatedRoutine,
       { headers: this.headers }

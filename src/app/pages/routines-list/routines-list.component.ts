@@ -20,9 +20,9 @@ export class RoutinesListComponent {
   }
 
   loadData() {
-    this.routinesService.getAllRoutines().subscribe((data) => {
-      console.log(data);
-      this.routines = data.data;
+    this.routinesService.getAllRoutines().subscribe((routine) => {
+      console.log(routine);
+      this.routines = routine.data;
     });
   }
 

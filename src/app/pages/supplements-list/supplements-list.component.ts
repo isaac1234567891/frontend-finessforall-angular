@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { SupplementsService } from '../../service/supplement.service';
 import { CommonModule, CurrencyPipe } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-supplements-list',
@@ -11,20 +13,23 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
 })
 export class SupplementsListComponent {
   supplements: any[] = [];
-  constructor(private supplementsService: SupplementsService) {}
+  constructor(private supplementsService: SupplementsService, 
+    private router: Router 
+  ) {}
   ngOnInit() {
     this.loadData();
   }
 
   loadData() {
-    this.supplementsService.getAllSupplements().subscribe((data) => {
-      console.log(data);
-      this.supplements = data.data;
+    this.supplementsService.getAllSupplements().subscribe((supplement) => {
+      console.log(supplement);
+      this.supplements = supplement.data;
     });
   }
 
   editar(id: any) {
     console.log(`editar suplemento ${id}`);
+    this.router.navigateByUrl(`supplements/edit/${id}`);
   }
   eliminar(id: any) {
     console.log(`eliminar suplemento ${id}`);
