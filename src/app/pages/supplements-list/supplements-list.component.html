@@ -1,3 +1,4 @@
+    {{supplements}}
 <table border="1">
   <thead>
       <tr>
@@ -9,7 +10,7 @@
       </tr>
   </thead>
   <tbody>
-      @for ( item of suplements; track $index) {
+      @for ( item of supplements; track $index) {
           <tr>
               <td>{{ item.urlImage }}</td>
               <td>{{ item.name }}</td>
@@ -17,8 +18,8 @@
               <td>{{ item.quantity }}</td>
               <td>{{ item.price | currency }}</td>
               <td>
-                  <a href="#">Editar</a>
-                  <a href="#">Eliminar</a>
+                <span (click)="editar(item._id)">Editar</span>
+                <span (click)="eliminar(item._id)">Eliminar</span>
               </td>
           </tr>
       }

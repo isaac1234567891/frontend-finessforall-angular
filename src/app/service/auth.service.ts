@@ -75,6 +75,8 @@ export class AuthService {
     return of( true );
   }
 
+//TODO: Verificar cuando se vence el token para que el guard limpie el localstorage y redireccione al login.
+
   verifyAuthUser() : Observable <boolean> {
     const token = localStorage.getItem('token') || '';
     const headers = new HttpHeaders().set('X-Token', token);

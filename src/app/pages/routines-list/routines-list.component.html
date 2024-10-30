@@ -15,7 +15,7 @@
   <tbody>
       @for ( item of routines; track $index) {
           <tr>
-              <td>{{ item.UrlImage }}</td>
+              <td>{{ item.image }}</td>
               <td>{{ item.name }}</td>
               <td>{{ item.repetitionsStrength }}</td>
               <td>{{ item.averageSetsStrength }}</td>
@@ -26,8 +26,8 @@
               <td>{{ item.description }}</td>
               <td>{{ item.muscleGroup }}</td>
               <td>
-                  <a href="#">Editar</a>
-                  <a href="#">Eliminar</a>
+                  <span (click)="editar(item._id)">Editar</span>
+                  <span (click)="eliminar(item._id)">Eliminar</span>
               </td>
           </tr>
       }

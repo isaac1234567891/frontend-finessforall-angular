@@ -1,5 +1,5 @@
 <section class="contenedor form-container">
-    <h1 class="text-form">Formulario de Recetas</h1>
+    <h1 class="text-form"> Actualizar Receta </h1>
     <form [formGroup]="formData" (ngSubmit)="handleSubmit()">
     <label for="name"> Receta</label>
     <input type="text" placeholder="name" formControlName="name" id="name" />
@@ -89,7 +89,7 @@
 
     <p>*Campos obligatorios</p>
     <br />
-    <button type="submit" [disabled]="formData.invalid">Regisrar</button>
+    <button type="submit" [disabled]="formData.invalid">Actualizar</button>
     </form>
 </section>
 

@@ -26,8 +26,8 @@
               <td>{{ item.carbohydrates }}</td>
               <td>{{ item.fiber }}</td>
               <td>
-                  <a href="#">Editar</a>
-                  <a href="#">Eliminar</a>
+                <span (click)="editar(item._id)">Editar</span>
+                <span (click)="eliminar(item._id)">Eliminar</span>
               </td>
           </tr>
       }
