@@ -248,21 +248,21 @@ img.home-icon {
   display: flex;
   justify-content: space-between;
 }
-
 a.exercises-button {
   background-image: linear-gradient(to right, var(--white--) 0%, #dfdee4 50%, var(--white--) 100%);
+  background: linear-gradient(70deg, #A4C4, #00A878);
   margin: 1rem 1rem 1rem 0;
-  padding: 1rem 0;
+  padding: .8rem 3.7rem;
   text-align: center;
   text-decoration: none;
   font-size: 2.5rem;
   font-family: 'Roboto';
   transition: 0.5s;
   background-size: 200% auto;
-  color: var(--limerick--);
+  color: var(--white--);
   border-radius: 2rem;
   display: block;
-  border: .3rem solid #a4c400;
+  border: .2rem solid #a4c400;
   width: 20rem;
 }
 
@@ -304,21 +304,21 @@ img.meals-img {
 
 a.meals-button {
   background-image: linear-gradient(to right, var(--white--) 0%, #dfdee4 50%, var(--white--) 100%);
+  background: linear-gradient(70deg, #A4C4, #00A878);
   margin: 1rem 1rem 1rem 0;
-  padding: 1rem 0;
+  padding: .8rem 3.7rem;
   text-align: center;
   text-decoration: none;
   font-size: 2.5rem;
   font-family: 'Roboto';
   transition: 0.5s;
   background-size: 200% auto;
-  color: var(--limerick--);
+  color: var(--white--);
   border-radius: 2rem;
   display: block;
-  border: .3rem solid #a4c400;
+  border: .2rem solid #a4c400;
   width: 20rem;
 }
-
 a.meals-button::before {
   content: url(/images/meals-icon-button.svg);
   margin-right: 1rem;
@@ -447,7 +447,7 @@ img.img-day {
 }
 
 h2.day {
-  color: var(--black--);
+  color: var(--white--);
   padding: .5rem 0;
 }
 
