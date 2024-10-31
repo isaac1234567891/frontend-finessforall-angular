@@ -11,14 +11,11 @@ import { authGuard } from './guards/auth.guard';
 import { MealsListComponent } from './pages/meals-list/meals-list.component';
 import { RoutinesListComponent } from './pages/routines-list/routines-list.component';
 import { SupplementsListComponent } from './pages/supplements-list/supplements-list.component';
-<<<<<<< HEAD
 import { PageMealsComponent } from './pages/page-meals/page-meals.component';
 import { PageRoutinesComponent } from './pages/page-routines/page-routines.component';
-=======
 import { RoutinesListEditComponent } from './pages/routines-list-edit/routines-list-edit.component';
 import { SupplementsListEditComponent } from './pages/supplements-list-edit/supplements-list-edit.component';
 import { MealsListEditComponent } from './pages/meals-list-edit/meals-list-edit.component';
->>>>>>> b3bb18e52684db390945ad3f1038ec01a5d602f6
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -29,18 +26,15 @@ export const routes: Routes = [
   { path: 'page-routines', component: PageRoutinesComponent},
   { path: 'page-meals', component: PageMealsComponent },
   { path: 'dashboard/admin', component: DashboardComponent, canActivate: [authGuard]},
-<<<<<<< HEAD
   { path: 'dashboard/supplements', component: SupplementsComponent, canActivate: [authGuard]},
   { path: 'dashboard/supplements-list', component: SupplementsListComponent, canActivate: [authGuard]},
   { path: 'dashboard/exercises', component: RoutinesComponent, canActivate: [authGuard]},
   { path: 'dashboard/exercises-list', component: RoutinesListComponent, canActivate: [authGuard]},
   { path: 'dashboard/meals', component: MealsComponent, canActivate: [authGuard]},
   { path: 'dashboard/meals-list', component: MealsListComponent, canActivate: [authGuard]},
-=======
   { path: 'routines/edit/:id',component: RoutinesListEditComponent, canActivate: [authGuard]},
   { path: 'supplements/edit/:id',component: SupplementsListEditComponent, canActivate: [authGuard]},
   { path: 'meals/edit/:id',component: MealsListEditComponent, canActivate: [authGuard]},
->>>>>>> b3bb18e52684db390945ad3f1038ec01a5d602f6
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', redirectTo: '404', pathMatch: 'full'}
 ];

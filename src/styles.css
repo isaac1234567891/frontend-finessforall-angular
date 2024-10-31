@@ -69,7 +69,7 @@ label{
   color: var(--white--);
 }
 .contenedor {
-  max-width: 75%;
+  max-width: 94%;
   width: 100%;
   margin: 0 auto;
 }
@@ -79,11 +79,11 @@ label{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 14rem;
+  height: 8rem;
 }
 .contenedor-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -91,7 +91,6 @@ label{
 .main-nav {
   list-style: none;
   display: flex;
-  gap: 4rem;
   font-size: 1.8rem;
   margin-left: 7rem;
 }
@@ -111,12 +110,17 @@ label{
 }
 
 .login-link {
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--limerick--);
+  align-items: center;
+  border-radius: 4rem;
   border: .2rem solid #A4C400;
-  padding: .8rem 3.7rem;
-  border-radius: 2rem;
+  color: var(--limerick--);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: center;
+  padding: 1.2rem 1.8rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 .acceso-link {
@@ -419,8 +423,6 @@ h1.meals-title {
 /** Meals Days Section */
 
 .meals-days-container{
-
-  height: 90rem;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -475,7 +477,6 @@ h1.exercises-title {
 
 .exercises-routine-container {
   width: 100%;
-  height: 50rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -745,3 +746,4 @@ section.form-banner-section {
 
 }
 @media ( max-width: 567px ) {}
+
