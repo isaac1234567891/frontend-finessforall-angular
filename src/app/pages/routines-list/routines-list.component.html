@@ -1,4 +1,4 @@
-<table border="1">
+<!-- <table border="1">
   <thead>
       <tr>
           <th>imagen</th>
@@ -32,7 +32,34 @@
           </tr>
       }
   </tbody>
-</table>
+</table> -->
 
 
 
+<ul class="routinesList">
+    @for (item of routines; track $index) {
+        <li class="routineListItem">
+            <div class="card">
+                <img class="imgItem" [src]="item.image" [alt]="item.name">
+                <div class="exerciseInfo">
+                    <h4>{{item.name}}</h4>
+                    <p class="muscleGroup">{{item.muscleGroup}}</p>
+                    <p class="description">{{item.description}}</p>
+                    <p class="repetitions">{{item.repetitionsStrength}}</p>
+                    <p class="sets">{{item.averageSetsStrength}}</p>
+                    <p class="repetitions">{{item.repetitionsEndurance}}</p>
+                    <p class="sets">{{item.averageSetsEndurance}}</p>
+                    <p class="repetitions">{{item.repetitionsHypertrophy}}</p>
+                    <p class="sets">{{item.averageSetstHypertrophy}}</p>
+                    
+                </div>
+                <td>
+                    <span (click)="editar(item._id)">Editar</span>
+                    <span (click)="eliminar(item._id)">Eliminar</span>
+                </td>
+            </div>
+        </li>
+    }
+
+
+</ul>
