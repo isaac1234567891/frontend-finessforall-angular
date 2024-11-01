@@ -35,31 +35,44 @@
 </table> -->
 
 
-
-<ul class="routinesList">
-    @for (item of routines; track $index) {
-        <li class="routineListItem">
-            <div class="card">
-                <img class="imgItem" [src]="item.image" [alt]="item.name">
-                <div class="exerciseInfo">
-                    <h4>{{item.name}}</h4>
-                    <p class="muscleGroup">{{item.muscleGroup}}</p>
-                    <p class="description">{{item.description}}</p>
-                    <p class="repetitions">{{item.repetitionsStrength}}</p>
-                    <p class="sets">{{item.averageSetsStrength}}</p>
-                    <p class="repetitions">{{item.repetitionsEndurance}}</p>
-                    <p class="sets">{{item.averageSetsEndurance}}</p>
-                    <p class="repetitions">{{item.repetitionsHypertrophy}}</p>
-                    <p class="sets">{{item.averageSetstHypertrophy}}</p>
-                    
+<div class="containerRoutines">
+    <ul class="routinesList">
+        @for (item of routines; track $index) {
+            <li class="routineListItem">
+                <div class="card">
+                    <img class="imgItem" [src]="item.image" [alt]="item.name">
+                    <div class="exerciseInfo">
+                        <h4>{{item.name}}</h4>
+                        <p class="description">{{item.description }}</p>
+                        <p class="muscleGroup">{{ item.muscleGroup }}</p>
+                        <h4>Fuerza</h4>
+                        <div class="containerSets">
+                            <h5>Repeticiones</h5>
+                            <p class="repetitions">{{item.repetitionsStrength}}</p>
+                            <h5>Series</h5>
+                            <p class="sets">{{item.averageSetsStrength}}</p>
+                        </div>
+                        <h4>Resistencia</h4>
+                        <div class="containerSets">
+                            <h5>Repeticiones</h5>
+                            <p class="repetitions">{{item.repetitionsEndurance}}</p>
+                            <h5>Series</h5>
+                            <p class="sets">{{item.averageSetsEndurance}}</p>
+                        </div>
+                        <h4>Aumento muscular</h4>
+                        <div class="containerSets">
+                            <h5>Repeticiones</h5>
+                            <p class="repetitions">{{item.repetitionsHypertrophy}}</p>
+                            <h5>Series</h5>
+                            <p class="sets">{{item.averageSetstHypertrophy}}</p>
+                        </div>
+                    </div>
+                    <td class="containerUpDe">
+                        <span class="editar-eliminar" (click)="editar(item._id)">Editar</span>
+                        <span class="editar-eliminar" (click)="eliminar(item._id)">Eliminar</span>
+                    </td>
                 </div>
-                <td>
-                    <span (click)="editar(item._id)">Editar</span>
-                    <span (click)="eliminar(item._id)">Eliminar</span>
-                </td>
-            </div>
-        </li>
-    }
-
-
-</ul>
+            </li>
+        }
+    </ul>
+</div>

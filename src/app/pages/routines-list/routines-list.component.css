@@ -1,0 +1,54 @@
+.card {
+    border: .1rem solid var(--limerick--);
+    border-radius: 1.5rem;
+}
+
+.containerRoutines {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    gap: 4rem;
+    padding: 0 5%;
+    flex-wrap: wrap;
+}
+
+ul.routinesList {
+    display: flex;
+    width: 90%;
+    gap: 6rem;
+    border: aqua 1px solid;
+}
+
+
+li.routineListItem {
+    width: 30rem;
+}
+
+p.muscleGroup {
+    font-weight: 400;
+}
+
+p.description {
+    font-size: 1.7rem;
+}
+
+.containerSets {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.8rem;
+    align-items: baseline;
+}
+
+td.containerUpDe {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border: solid;
+    font-size: 1.5rem;
+    border-radius: 0 0 1.4rem 1.4rem;
+}
+
+span.editar-eliminar {
+    padding: 1rem;
+}
