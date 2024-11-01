@@ -1,128 +1,191 @@
-.product-card {
-  display: flex;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 800px;
-  padding: 20px;
+.icon-cart{
+  width: 40px;
+  height: 40px;
+  stroke: var(--Green-Munsell--);
 }
 
-.product-image {
-  width: 40%;
+.icon-cart:hover{
+  cursor: pointer;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* Header */
+.container-tienda{
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0 40px 0;
+}
+
+.container-icon{
+  position: relative;
+}
+
+.count-products{
+  position: absolute;
+  top: 55%;
+  right: 0;
+
+  background-color: var(--limerick--);
+  color: var(--white--);
+  width: 25px;
+  height: 25px;
+
+  display: flex;
   justify-content: center;
-  padding-right: 20px;
-  border-right: 1px solid #ddd;
+  align-items: center;
+  border-radius: 50%;
 }
 
-.product-image img {
-  width: 100%;
-  max-width: 250px;
+#contador-productos{
+  font-size: 12px;
 }
 
-.product-details {
-  padding: 0 20px;
-  width: 60%;
+.container-cart-products{
+  position: absolute;
+  top: 50px;
+  right: 0;
+
+  background-color: var(--white--);
+  width: 400px;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  border-radius: 10px;
+
 }
 
-.product-title {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.product-price {
-  font-size: 1.5em;
-  color: #e67e22;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.price-note {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.product-description {
-  font-size: 1em;
-  color: #666;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.product-option {
-  margin-bottom: 20px;
-}
-
-.product-option label {
-  font-size: 1em;
-  font-weight: bold;
-  color: #333;
-}
-
-.product-option select {
-  padding: 8px;
-  font-size: 1em;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 100%;
-}
-
-.add-to-cart {
+.cart-product{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
 }
 
-.quantity-input {
-  width: 50px;
-  padding: 5px;
-  font-size: 1em;
-  text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 10px;
+.info-cart-product{
+  display: flex;
+  justify-content: space-between;
+  flex: 0.8;
 }
 
-.cart-btn {
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #fff;
-  background-color: #333;
+.titulo-producto-carrito{
+  font-size: 20px;
+}
+
+.precio-producto-carrito{
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.cantidad-producto-carrito{
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.icon-close{
+  width: 25px;
+  height: 25px;
+}
+
+.icon-close:hover{
+  stroke: red;
+  cursor: pointer;
+}
+
+.cart-total{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.cart-total h3{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.total-pagar{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.hidden-cart{
+  display: none;
+}
+
+
+
+
+/* Main */
+.container-items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.item{
+  border-radius: 10px;
+  border: .3rem solid var(--limerick--);
+  cursor: pointer;
+}
+
+.item:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img{
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: all .5s;
+}
+
+.item figure{
+  overflow: hidden;
+}
+
+.item:hover img{
+  transform: scale(1.2);
+}
+
+.info-product{
+  padding: 15px 30px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.price{
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.info-product button{
   border: none;
-  border-radius: 4px;
+  background: none;
+  color: var(--white--);
+  padding: 15px 10px;
   cursor: pointer;
-  transition: background 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  background-image: linear-gradient(to right, var(--limerick--) 0%, var(--Green-Munsell--) 50%, var(--limerick--) 100%);
+  font-size: 1.8rem;
+  font-family: "Roboto";
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 2rem #000;
+  border-radius: 1rem;
+  border: .25rem solid #a4c400;
 
-.cart-btn:hover {
-  background-color: #555;
 }
-
-.action-icons {
-  display: flex;
-  margin-top: 10px;
-  gap: 15px;
-}
-
-.action-icons img {
-  width: 25px;
-  cursor: pointer;
-}
-
-.social-icons {
-  display: flex;
-  margin-top: 15px;
-  gap: 10px;
-}
-
-.social-icons img {
-  width: 25px;
-  cursor: pointer;
+.container-supplements {
+  max-width: 94%;
+  width: 100%;
+  margin: 0 auto;
 }

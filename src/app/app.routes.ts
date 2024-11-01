@@ -17,6 +17,7 @@ import { RoutinesListEditComponent } from './pages/routines-list-edit/routines-l
 import { SupplementsListEditComponent } from './pages/supplements-list-edit/supplements-list-edit.component';
 import { MealsListEditComponent } from './pages/meals-list-edit/meals-list-edit.component';
 import { PageSupplementsComponent } from './pages/page-supplements/page-supplements.component';
+import { SupplementsDetailComponent } from './pages/supplements-detail/supplements-detail.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -27,6 +28,7 @@ export const routes: Routes = [
   { path: 'page-routines', component: PageRoutinesComponent},
   { path: 'page-meals', component: PageMealsComponent },
   { path: 'page-supplements', component: PageSupplementsComponent},
+  { path: 'page-supplements-detail/:id', component: SupplementsDetailComponent },
   { path: 'dashboard/admin', component: DashboardComponent, canActivate: [authGuard]},
   { path: 'dashboard/supplements', component: SupplementsComponent, canActivate: [authGuard]},
   { path: 'dashboard/supplements-list', component: SupplementsListComponent, canActivate: [authGuard]},

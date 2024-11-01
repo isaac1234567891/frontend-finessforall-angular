@@ -1,41 +1,146 @@
-<div class="page contenedor">
-  <section>
-    <div class="product-card">
-      <!-- Imagen del producto -->
-      <div class="product-image">
-        <img src="https://via.placeholder.com/250" alt="Iso Whey Zero">
+
+  <!-- <div>
+    <div class="container-tienda">
+      <h2>Tienda</h2>
+    <div class="container-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+      </svg>
+      <div class="count-products">
+        <span id="contador-productos">0</span>
       </div>
+      <div class="container-cart-products hidden-cart">
+        <div class="cart-product">
+          <div class="info-cart-product">
+            <span class="cantidad-producto-carrito">1</span>
+            <p class="titulo-producto-carrito">proteinas</p>
+            <span class="precio-producto-carrito">100.000 $</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
 
-      <!-- Detalles del producto -->
-      <section class="product-details">
-        <div class="product-title">Iso Whey Zero - 908G</div>
-        <div class="product-price">41,90 €</div>
-        <div class="price-note">Impuestos incluidos</div>
-        <div class="product-description">
-          Iso Whey Zero de Biotech USA es un producto que te brinda proteína de alta calidad 100% a base de suero de leche obtenido por ultrafiltración, siendo una de las formas más cómodas de consumir proteínas para el mantenimiento y desarrollo de masa muscular.
+        </div>
+        <div class="cart-total">
+          <h3>total</h3>
+          <span class="total-pagar">100.000 $</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container-items">
+      <div class="item">
+        <figure>
+          <img src="" alt="">
+        </figure>
+        <div class="info-product">
+          <h2>proteinas</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsam laborum quasi in accusamus incidunt atque sit, hic blanditiis illo impedit corporis aliquam doloribus fugiat, rerum doloremque nisi libero nulla!</p>
+          <button>añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item">
+        <figure>
+          <img src="" alt="">
+        </figure>
+        <div class="info-product">
+          <h2>pre-entreno</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsam laborum quasi in accusamus incidunt atque sit, hic blanditiis illo impedit corporis aliquam doloribus fugiat, rerum doloremque nisi libero nulla!</p>
+          <span class="price"> 100.000 $ </span>
+          <button>añadir al carrito</button>
+        </div>
+      </div><div class="item">
+        <figure>
+          <img src="assets/image/creatina.png" alt="">
+        </figure>
+        <div class="info-product">
+          <h2>creatina</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsam laborum quasi in accusamus incidunt atque sit, hic blanditiis illo impedit corporis aliquam doloribus fugiat, rerum doloremque nisi libero nulla!</p>
+          <button>añadir al carrito</button>
+        </div>
+      </div><div class="item">
+        <figure>
+          <img src="" alt="">
+        </figure>
+        <div class="info-product">
+          <h2>aminoacidos</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsam laborum quasi in accusamus incidunt atque sit, hic blanditiis illo impedit corporis aliquam doloribus fugiat, rerum doloremque nisi libero nulla!</p>
+          <button>añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <pre>{{supplements|json}}</pre> -->
+<div class="container-supplements">
+    <div class="container-tienda">
+      <h2>Tienda</h2>
+
+      <div class="container-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-cart"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        <div class="count-products">
+          <span id="contador-productos">0</span>
         </div>
 
-        <!-- Opción de sabor -->
-        <div class="product-option">
-          <label for="flavor">SABOR</label>
-          <select id="flavor" name="flavor">
-            <option value="chocolate">chocolate</option>
-            <option value="vainilla">vainilla</option>
-            <option value="fresa">fresa</option>
-          </select>
+        <div class="container-cart-products hidden-cart">
+          <div class="cart-product">
+            <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Zapatos Nike</p>
+                            <span class="precio-producto-carrito">$80</span>
+                        </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-close"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+                    <div class="cart-total">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">$200</span>
+                    </div>
         </div>
-
-        <!-- Añadir al carrito -->
-        <div class="add-to-cart">
-          <input type="number" class="quantity-input" value="1" min="1">
-          <button class="cart-btn">🛒 Añadir al carrito</button>
+      </div>
+    </div>
+    <div class="container-items">
+      @for (supplement of supplements; track $index) {
+        <div class="item" [routerLink]="['/page-supplements-detail', supplement._id]" >
+          <figure>
+            <img
+              [src]="supplement.urlImage"
+              [alt]="supplement.name"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>{{supplement.name}}</h2>
+            <p class="descripcion">{{supplement.description}}</p>
+            <p class="price">{{supplement.price | currency}}</p>
+            <button>Añadir al carrito</button>
+          </div>
         </div>
-
-        <!-- Iconos de acción -->
-        <div class="action-icons">
-          <img src="https://via.placeholder.com/25?text=❤️" alt="wishlist" title="Añadir a deseos">
-          <img src="https://via.placeholder.com/25?text=🔄" alt="comparar" title="Comparar">
-        </div>
-  </section>
+      }
+    </div>
 </div>
+
 

@@ -3,6 +3,7 @@ import data from '../../data/data.json';
 import { MealsService } from '../../service/meals.service';
 import { CommonModule } from '@angular/common';
 import { BanerComponent } from "../baner/baner.component";
+import { CartService } from '../../service/cart.service';
 
 
 @Component({
@@ -23,4 +24,5 @@ export class HomeComponent {
       this.Meals = data.data
     } )
   }
+
 }
