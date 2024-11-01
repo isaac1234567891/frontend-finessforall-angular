@@ -38,7 +38,7 @@ export class SupplementsComponent {
     this.supplementsService.registerSupplements(this.formData.value).subscribe(
     (data) => {
       console.log(data);
-      this.router.navigateByUrl('supplements-list');
+      this.router.navigateByUrl('dashboard/supplements-list');
     }
     );
       this.formData.reset();

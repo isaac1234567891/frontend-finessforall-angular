@@ -45,7 +45,7 @@ export class MealsListEditComponent {
         console.log(meals);
 
         const { data } = meals;
-        const { 
+        const {
 
           name,
           image,
@@ -81,7 +81,7 @@ export class MealsListEditComponent {
       .updateMeals(this.selectedId, this.formData.value)
       .subscribe((data) => {
         console.log(data);
-        this.router.navigateByUrl('meals-list');
+        this.router.navigateByUrl('dashboard/meals-list');
       });
     }
     this.formData.reset();

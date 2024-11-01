@@ -28,20 +28,17 @@ export class SupplementsListEditComponent {
       private activatedRoute: ActivatedRoute
     ) {}
     ngOnInit() {
-      this.supplementsService.getAllSupplements().subscribe( (data) => {
-        console.log(data);
-        this.supplements = data.data;
-      });
+
       this.activatedRoute.params.subscribe((data:any) =>{
         console.log(data.id);
         this.selectedId = data.id;
 
-        this.supplementsService.getSupplementsbyId([data.id]).subscribe((supplements) => {
+        this.supplementsService.getSupplementsbyId(data.id).subscribe((supplements) => {
           console.log(supplements);
 
           const { data } = supplements;
           const {
-  
+
               urlImage,
               name,
               description,
@@ -63,11 +60,11 @@ export class SupplementsListEditComponent {
         handleSubmit() {
           if (this.formData.valid){
             this.supplementsService
-            .updateSupplements(this.selectedId, this.formData.value)
-            .subscribe((data) =>{
-              console.log(data);
-              this.router.navigateByUrl('supplements-list');
-            });
+              .updateSupplements(this.selectedId, this.formData.value)
+              .subscribe((data) =>{
+                console.log(data);
+                this.router.navigateByUrl('dashboard/supplements-list');
+              });
           }
           this.formData.reset();
         }

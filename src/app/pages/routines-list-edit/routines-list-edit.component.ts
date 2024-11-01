@@ -87,7 +87,7 @@
           .updateRoutine(this.selectedId, this.formData.value)
           .subscribe((data) => {
             console.log(data);
-            this.router.navigateByUrl('exercises-list');
+            this.router.navigateByUrl('dashboard/exercises-list');
           });
       }
       this.formData.reset();

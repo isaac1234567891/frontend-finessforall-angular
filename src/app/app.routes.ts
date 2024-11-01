@@ -16,6 +16,7 @@ import { PageRoutinesComponent } from './pages/page-routines/page-routines.compo
 import { RoutinesListEditComponent } from './pages/routines-list-edit/routines-list-edit.component';
 import { SupplementsListEditComponent } from './pages/supplements-list-edit/supplements-list-edit.component';
 import { MealsListEditComponent } from './pages/meals-list-edit/meals-list-edit.component';
+import { PageSupplementsComponent } from './pages/page-supplements/page-supplements.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -25,6 +26,7 @@ export const routes: Routes = [
   { path: '404', component: PageNotFoundComponent},
   { path: 'page-routines', component: PageRoutinesComponent},
   { path: 'page-meals', component: PageMealsComponent },
+  { path: 'page-supplements', component: PageSupplementsComponent},
   { path: 'dashboard/admin', component: DashboardComponent, canActivate: [authGuard]},
   { path: 'dashboard/supplements', component: SupplementsComponent, canActivate: [authGuard]},
   { path: 'dashboard/supplements-list', component: SupplementsListComponent, canActivate: [authGuard]},

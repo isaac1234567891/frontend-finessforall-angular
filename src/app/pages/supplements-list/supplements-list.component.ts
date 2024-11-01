@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
 })
 export class SupplementsListComponent {
   supplements: any[] = [];
-  constructor(private supplementsService: SupplementsService, 
-    private router: Router 
+  constructor(private supplementsService: SupplementsService,
+    private router: Router
   ) {}
   ngOnInit() {
     this.loadData();
