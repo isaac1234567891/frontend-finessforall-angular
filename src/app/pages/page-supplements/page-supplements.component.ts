@@ -23,7 +23,7 @@ export class PageSupplementsComponent {
       this.supplements = data.data
     })
   }
-  addToCart(product: any): void{
-    this.CartService.addToCart(product);
+  addToCart(supplement: any): void{
+    this.CartService.addToCart(supplement);
   }
 }

@@ -4,19 +4,41 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-  private cartProducts = []
+  private cartProducts: any = []
   private localStoragekey = 'cart'
-  constructor() { }
+  constructor() {
+    this.localCartFromtLocalStorage();
+    console.log(this.cartProducts)
+  }
 
   addToCart(product: any){
-    console.log(product);
+    const productFound = this.cartProducts.find( (productItem: any) => {
+      return productItem._id == product._id
+    } );
+    console.log(productFound);
 
+    if(! productFound) {
+      product.items = 1;
+      this.cartProducts.push(product);
+    }
+    else{
+      product.items += 1
+    }
+    console.log(this.cartProducts)
+
+    this.saveCartToLocalStorage();
+  }
+
+  private saveCartToLocalStorage(){
+    localStorage.setItem( this.localStoragekey, JSON.stringify(this.cartProducts))
   }
 
   private localCartFromtLocalStorage(){
-    const dataCart = localStorage.getItem(this.localStoragekey);
-    if(dataCart) {
-      this.cartProducts = JSON.parse(dataCart)
+    if(localStorage.getItem(this.localStoragekey)) {
+      this.cartProducts = JSON.parse(localStorage.getItem(this.localStoragekey) ! )
+    }
+    else{
+      this.cartProducts = []
     }
   }
 }

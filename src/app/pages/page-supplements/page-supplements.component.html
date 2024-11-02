@@ -125,18 +125,21 @@
     </div>
     <div class="container-items">
       @for (supplement of supplements; track $index) {
-        <div class="item" [routerLink]="['/page-supplements-detail', supplement._id]" >
+        <div class="item" >
+          <a [routerLink]="['/page-supplements-detail', supplement._id]">
           <figure>
             <img
+
               [src]="supplement.urlImage"
               [alt]="supplement.name"
             />
           </figure>
+          </a>
           <div class="info-product">
-            <h2>{{supplement.name}}</h2>
+            <h2 [routerLink]="['/page-supplements-detail', supplement._id]">{{supplement.name}}</h2>
             <p class="descripcion">{{supplement.description}}</p>
             <p class="price">{{supplement.price | currency}}</p>
-            <button>Añadir al carrito</button>
+            <button class="btn-addtocart" (click)="addToCart(supplement)">Añadir al carrito</button>
           </div>
         </div>
       }
