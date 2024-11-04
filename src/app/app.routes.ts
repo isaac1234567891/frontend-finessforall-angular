@@ -18,6 +18,8 @@ import { SupplementsListEditComponent } from './pages/supplements-list-edit/supp
 import { MealsListEditComponent } from './pages/meals-list-edit/meals-list-edit.component';
 import { PageSupplementsComponent } from './pages/page-supplements/page-supplements.component';
 import { SupplementsDetailComponent } from './pages/supplements-detail/supplements-detail.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { PurchaseCompletedComponent } from './pages/purchase-completed/purchase-completed.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -29,6 +31,8 @@ export const routes: Routes = [
   { path: 'page-meals', component: PageMealsComponent },
   { path: 'page-supplements', component: PageSupplementsComponent},
   { path: 'page-supplements-detail/:id', component: SupplementsDetailComponent },
+  { path: 'checkout', component: CheckoutComponent, canActivate: [authGuard]},
+  { path: 'purchase-completed', component: PurchaseCompletedComponent, canActivate:[authGuard]},
   { path: 'dashboard/admin', component: DashboardComponent, canActivate: [authGuard]},
   { path: 'dashboard/supplements', component: SupplementsComponent, canActivate: [authGuard]},
   { path: 'dashboard/supplements-list', component: SupplementsListComponent, canActivate: [authGuard]},

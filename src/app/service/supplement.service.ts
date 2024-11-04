@@ -21,8 +21,8 @@ export class SupplementsService {
   }
   deleteSupplements( id: any ) {
     return this.request.delete(`http://localhost:3000/api/supplements/${id}`,{headers: this.headers});
-   }
-   getSupplementsbyId(id: any) {
+  }
+  getSupplementsbyId(id: any) {
     return this.request.get<any>(`http://localhost:3000/api/supplements/${id}`);
   }
 

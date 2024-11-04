@@ -25,5 +25,6 @@ export class PageSupplementsComponent {
   }
   addToCart(supplement: any): void{
     this.CartService.addToCart(supplement);
+
   }
 }

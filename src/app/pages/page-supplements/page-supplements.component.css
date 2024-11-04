@@ -120,10 +120,6 @@ img{
 }
 
 
-.btn-addtocart{
-  z-index: 1;
-}
-
 /* Main */
 .container-items{
   display: grid;
