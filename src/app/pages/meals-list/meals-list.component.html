@@ -1,35 +1,40 @@
-<table border="1">
-  <thead>
-      <tr>
-          <th>Nombre</th>
-          <th>imagen</th>
-          <th>ingredientes</th>
-          <th>instruciones</th>
-          <th>calorias</th>
-          <th>proteinas</th>
-          <th>grasas</th>
-          <th>Carbohidratos</th>
-          <th>fibra</th>
-          <th>Acciones</th>
-      </tr>
-  </thead>
-  <tbody>
-      @for ( item of meals; track $index) {
-          <tr>
-              <td>{{ item.name }}</td>
-              <td>{{ item.image }}</td>
-              <td>{{ item.ingredients }}</td>
-              <td>{{ item.instructions }}</td>
-              <td>{{ item.calories }}</td>
-              <td>{{ item.proteins }}</td>
-              <td>{{ item.fats }}</td>
-              <td>{{ item.carbohydrates }}</td>
-              <td>{{ item.fiber }}</td>
-              <td>
-                <span (click)="editar(item._id)">Editar</span>
-                <span (click)="eliminar(item._id)">Eliminar</span>
-              </td>
-          </tr>
-      }
-  </tbody>
-</table>
+<div class="page contenedor">
+  <table border="1">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>imagen</th>
+            <th>ingredientes</th>
+            <th>instruciones</th>
+            <th>calorias</th>
+            <th>proteinas</th>
+            <th>grasas</th>
+            <th>Carbohidratos</th>
+            <th>fibra</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for ( item of meals; track $index) {
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>
+                  <img class="img-thumbnail" [src]="item.image" [alt]="item.imagen">
+                </td>
+                <td>{{ item.ingredients }}</td>
+                <td>{{ item.instructions }}</td>
+                <td>{{ item.calories }}</td>
+                <td>{{ item.proteins }}</td>
+                <td>{{ item.fats }}</td>
+                <td>{{ item.carbohydrates }}</td>
+                <td>{{ item.fiber }}</td>
+                <td>
+                  <span (click)="editar(item._id)">Editar</span>
+                  <span (click)="eliminar(item._id)">Eliminar</span>
+                </td>
+            </tr>
+        }
+    </tbody>
+  </table>
+
+</div>

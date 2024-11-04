@@ -41,7 +41,7 @@ export class MealsComponent {
       console.log(this.formData.value);
       this.mealsService.registerMeals(this.formData.value).subscribe((data) => {
         console.log(data);
-        this.router.navigateByUrl('meals-list');
+        this.router.navigateByUrl('dashboard/meals-list');
       });
       this.formData.reset();
     }

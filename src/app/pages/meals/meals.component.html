@@ -1,4 +1,5 @@
-<section class="contenedor form-container">
+
+  <section class="contenedor form-container">
     <h1 class="text-form">Formulario de Recetas</h1>
     <form [formGroup]="formData" (ngSubmit)="handleSubmit()">
     <label for="name"> Receta</label>
@@ -92,4 +93,3 @@
     <button type="submit" [disabled]="formData.invalid">Regisrar</button>
     </form>
 </section>
-

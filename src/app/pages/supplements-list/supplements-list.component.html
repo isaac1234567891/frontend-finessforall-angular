@@ -1,27 +1,32 @@
-    {{supplements}}
-<table border="1">
-  <thead>
-      <tr>
-          <th>imagen</th>
-          <th>suplemento</th>
-          <th>descripcion</th>
-          <th>cantidad</th>
-          <th>precio</th>
-      </tr>
-  </thead>
-  <tbody>
-      @for ( item of supplements; track $index) {
-          <tr>
-              <td>{{ item.urlImage }}</td>
-              <td>{{ item.name }}</td>
-              <td>{{ item.description }}</td>
-              <td>{{ item.quantity }}</td>
-              <td>{{ item.price | currency }}</td>
+<div class="page contenedor">
+  {{supplements}}
+  <table border="1">
+    <thead>
+        <tr>
+            <th>imagen</th>
+            <th>suplemento</th>
+            <th>descripcion</th>
+            <th>cantidad</th>
+            <th>precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for ( item of supplements; track $index) {
+            <tr>
               <td>
-                <span (click)="editar(item._id)">Editar</span>
-                <span (click)="eliminar(item._id)">Eliminar</span>
+                <img class="img-thumbnail" [src]="item.UrlImage" [alt]="item.UrlImage">
               </td>
-          </tr>
-      }
-  </tbody>
-</table>
+                <td>{{ item.name }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.price | currency }}</td>
+                <td>
+                  <span (click)="editar(item._id)">Editar</span>
+                  <span (click)="eliminar(item._id)">Eliminar</span>
+                </td>
+            </tr>
+        }
+    </tbody>
+  </table>
+
+</div>
