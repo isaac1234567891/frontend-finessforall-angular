@@ -12,9 +12,11 @@ import { Router } from '@angular/router';
 })
 export class RoutinesListComponent {
   routines: any[] = [];
-  constructor(private routinesService: RoutineService,
+
+  constructor(private routinesService: RoutineService, 
     private router: Router
   ) {}
+  
   ngOnInit() {
     this.loadData();
   }

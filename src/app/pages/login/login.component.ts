@@ -38,7 +38,7 @@ export class LoginComponent {
           this.message = 'Ingresando al sistema...';
 
           setTimeout( () => {
-            this.router.navigateByUrl( 'dashboard/admin' );   // Redireccionamos al dashboard
+            this.router.navigateByUrl( 'dashboard/exercises-list' );   // Redireccionamos al dashboard
           }, 4000 );
         }
 

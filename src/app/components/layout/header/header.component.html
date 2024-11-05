@@ -179,10 +179,14 @@
         }
       </ul>
 
-      @if (userData) {
-        <!-- <pre>{{|json}}</pre> -->
-        <span> hola, {{userData.name}}</span>
-        }
+      
     </nav>
   </div>
 </header>
+@if (userData) {
+  <!-- <pre>{{|json}}</pre> -->
+   <div class="containerHello">
+      <span class="userHello"> Hola {{userData.name}}</span>
+   </div>
+  
+  }

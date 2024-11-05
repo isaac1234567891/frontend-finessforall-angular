@@ -1,40 +1,60 @@
-<div class="page contenedor">
-  <table border="1">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>imagen</th>
-            <th>ingredientes</th>
-            <th>instruciones</th>
-            <th>calorias</th>
-            <th>proteinas</th>
-            <th>grasas</th>
-            <th>Carbohidratos</th>
-            <th>fibra</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @for ( item of meals; track $index) {
-            <tr>
-                <td>{{ item.name }}</td>
-                <td>
-                  <img class="img-thumbnail" [src]="item.image" [alt]="item.imagen">
-                </td>
-                <td>{{ item.ingredients }}</td>
-                <td>{{ item.instructions }}</td>
-                <td>{{ item.calories }}</td>
-                <td>{{ item.proteins }}</td>
-                <td>{{ item.fats }}</td>
-                <td>{{ item.carbohydrates }}</td>
-                <td>{{ item.fiber }}</td>
-                <td>
-                  <span (click)="editar(item._id)">Editar</span>
-                  <span (click)="eliminar(item._id)">Eliminar</span>
-                </td>
-            </tr>
-        }
-    </tbody>
-  </table>
+<div class="containerMeals">
+  <ul class="mealsList">
+      @for (item of meals; track $index) {
+          <li class="mealsListItem">
+              <div class="card">
+                  <img class="imgItem" [src]="item.image" [alt]="item.name">
+                  <div class="mealsInfo">
+                      <div class="itemName">
+                          <h4>{{item.name}}</h4>
+                      </div>
+                      <div class="itemIngredients">
+                          <h4>Ingredientes:</h4>
+                          <p class="ingredients">{{item.ingredients}}</p>
+                      </div>
+                      <div class="containerInf">
+                          <div class="itemInstructions">
+                              <h4>Instrucciones:</h4>
+                              <p class="quantity">&nbsp;{{ item.instructions }}</p>
+                          </div>
+                          <div class="itemCalories">
+                              <h4>Cantidad de calorías:</h4>
+                              <p class="quantity">&nbsp;{{item.calories}}g</p>
+                          </div>
+                          <div class="itemProteins">
+                              <h4>Cantidad de proteínas:</h4>
+                              <p class="quantity">&nbsp;{{item.proteins}}g</p>
+                          </div>
+                          <div class="itemFats">
+                              <h4>Cantidad de grasas:</h4>
+                              <p class="quantity">&nbsp;{{item.fats}}g</p>
+                          </div>
+                          <div class="itemCarbohydrates">
+                            <h4>Cantidad de carbohidratos:</h4>
+                            <p class="quantity">&nbsp;{{item.carbohydrates}}g</p>
+                          </div>
+                          <div class="itemFiber">
+                            <h4>Cantidad de fibra:</h4>
+                            <p class="quantity">&nbsp;{{item.fiber}}g</p>
+                          </div>
 
-</div>
+                          <ul class="editDelete">
+                              <li class="contEdit" (click)="editar(item._id)">
+                                  <img class="editIco" src="assets/image/editIcon.svg" alt="Icono de editar">&nbsp;&nbsp;
+                                  <a (click)="editar(item._id)" class="editButtom">
+                                      Editar
+                                  </a>
+                              </li>
+                              <li class="contDelete" (click)="eliminar(item._id)">
+                                  <img class="deleteIco" src="assets/image/deleteIcon.svg" alt="Icono de eliminar">&nbsp;&nbsp;
+                                  <a (click)="eliminar(item._id)" class="deleteButtom">
+                                      Eliminar
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </li>
+      }
+  </ul>

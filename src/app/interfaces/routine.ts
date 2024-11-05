@@ -1,5 +1,5 @@
 export interface Routine {
-    urlImage: string,
+    image: string,
     name: string,
     repetitionsStrength: number,
     averageSetsStrength: number,

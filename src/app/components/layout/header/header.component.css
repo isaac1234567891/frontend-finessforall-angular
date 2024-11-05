@@ -43,6 +43,14 @@
 .submenu a:hover {
   background-color: var(--Eerie-Black--);
 }
+
+.containerHello {
+  padding-top: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 @media ( min-width: 768px){
   .main-nav {
     display: flex;
