@@ -1,12 +1,10 @@
 .card {
-    border: .1rem solid var(--limerick--);
     border-radius: 1.5rem;
 }
 
 .containerRoutines {
     display: flex;
     justify-content: center;
-    text-align: center;
     list-style: none;
     gap: 4rem;
     padding: 0 5%;
@@ -14,41 +12,135 @@
 }
 
 ul.routinesList {
+    list-style: none;
     display: flex;
-    width: 90%;
-    gap: 6rem;
-    border: aqua 1px solid;
+    gap: 1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-
 li.routineListItem {
-    width: 30rem;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: var(--Dark-Gunmetal--);
+    border-radius: 2.5rem;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+img.imgItem {
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.itemName {
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.itemDescription {
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.itemMuscleGroup {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin: .5rem 0;
 }
 
 p.muscleGroup {
-    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+p.repetitions {
+    padding: 0;
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 200;
+}
+
+.itemStrength, .itemEndurance, .itemHypertrophy {
+    display: flex;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 1.7rem 1rem;
+    margin: .8rem 0;
+    background-color: var(--Dark-Gunmetal--);
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+p.muscleGroup {
+    font-size: 1.7rem;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
 }
 
 p.description {
     font-size: 1.7rem;
+    padding: 0;
 }
 
-.containerSets {
+.itemSets {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+p.sets {
+    font-size: 1.7rem;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+}
+
+/* .containerSets {
     display: flex;
     justify-content: space-evenly;
     font-size: 1.8rem;
     align-items: baseline;
-}
+} */
 
-td.containerUpDe {
+ul.editDelete {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    border: solid;
-    font-size: 1.5rem;
-    border-radius: 0 0 1.4rem 1.4rem;
+    list-style: none;
+    font-size: 1.7rem;
+    align-items: center;
+    gap: 1rem;
 }
 
-span.editar-eliminar {
-    padding: 1rem;
+li.contEdit {
+    display: flex;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 1.7rem 1rem;
+    margin: .8rem 0;
+    background-color: var(--Dark-Gunmetal--);
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+li.contDelete {
+    display: flex;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 1.7rem 1rem;
+    margin: .8rem 0;
+    background-color: var(--Dark-Gunmetal--);
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+@media ( max-width: 768px ) {
+    li.routineListItem {
+        width: 100%;
+    }
 }

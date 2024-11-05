@@ -82,6 +82,7 @@ label{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 3rem;
   height: var( --height-header );
 }
 .contenedor-header {
@@ -270,6 +271,7 @@ img.home-icon {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 82%;
 }
 
 .exercises-content {
@@ -590,8 +592,8 @@ li.social-item {
     }
     label.menu-icon {
         position: absolute;
-        top: 48px;
-        right: 45px;
+        top: 20px;
+        right: 20px;
     }
     .menu {
         display: none;
@@ -767,5 +769,6 @@ li.social-item {
 }
 .footer {
   height: var( --height-footer );
+  padding-top: 7rem;
 }
 

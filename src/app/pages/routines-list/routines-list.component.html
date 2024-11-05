@@ -1,40 +1,3 @@
-<!-- <table border="1">
-  <thead>
-      <tr>
-          <th>imagen</th>
-          <th>nombre de la rutina</th>
-          <th>repetitionsStrength</th>
-          <th>averageSetsStrenght</th>
-          <th>repetitionsEndurance</th>
-          <th>averageSetsEndurance</th>
-          <th>repetitionsHypertrophy</th>
-          <th>averageSetsHypertrophy</th>
-          <th>descripcion</th>
-          <th>grupo Muscular</th>
-  </thead>
-  <tbody>
-      @for ( item of routines; track $index) {
-          <tr>
-              <td>{{ item.image }}</td>
-              <td>{{ item.name }}</td>
-              <td>{{ item.repetitionsStrength }}</td>
-              <td>{{ item.averageSetsStrength }}</td>
-              <td>{{ item.repetitionsEndurance }}</td>
-              <td>{{ item.averageSetsEndurance }}</td>
-              <td>{{ item.repetitionsHypertrophy }}</td>
-              <td>{{ item.averageSetstHypertrophy }}</td>
-              <td>{{ item.description }}</td>
-              <td>{{ item.muscleGroup }}</td>
-              <td>
-                  <span (click)="editar(item._id)">Editar</span>
-                  <span (click)="eliminar(item._id)">Eliminar</span>
-              </td>
-          </tr>
-      }
-  </tbody>
-</table> -->
-
-
 <div class="containerRoutines">
     <ul class="routinesList">
         @for (item of routines; track $index) {
@@ -42,35 +5,50 @@
                 <div class="card">
                     <img class="imgItem" [src]="item.image" [alt]="item.name">
                     <div class="exerciseInfo">
-                        <h4>{{item.name}}</h4>
-                        <p class="description">{{item.description }}</p>
-                        <p class="muscleGroup">{{ item.muscleGroup }}</p>
-                        <h4>Fuerza</h4>
-                        <div class="containerSets">
-                            <h5>Repeticiones</h5>
-                            <p class="repetitions">{{item.repetitionsStrength}}</p>
-                            <h5>Series</h5>
-                            <p class="sets">{{item.averageSetsStrength}}</p>
+                        <div class="itemName">
+                            <h4>{{item.name}}</h4>
                         </div>
-                        <h4>Resistencia</h4>
-                        <div class="containerSets">
-                            <h5>Repeticiones</h5>
-                            <p class="repetitions">{{item.repetitionsEndurance}}</p>
-                            <h5>Series</h5>
-                            <p class="sets">{{item.averageSetsEndurance}}</p>
+                        <div class="itemDescription">
+                            <p class="description">{{item.description }}</p>
                         </div>
-                        <h4>Aumento muscular</h4>
-                        <div class="containerSets">
-                            <h5>Repeticiones</h5>
-                            <p class="repetitions">{{item.repetitionsHypertrophy}}</p>
-                            <h5>Series</h5>
-                            <p class="sets">{{item.averageSetstHypertrophy}}</p>
+                        <div class="containerInf">
+                            <div class="itemMuscleGroup">
+                                <h4>Grupo muscular:</h4>
+                                <p class="muscleGroup">&nbsp;{{ item.muscleGroup }}</p>
+                            </div>
+                            <div class="itemStrength">
+                                <h4>Repeticiones para fuerza:</h4>
+                                <p class="repetitions">&nbsp;{{item.repetitionsStrength}}</p>
+                            </div>
+                            <div class="itemEndurance">
+                                <h4>Repeticiones para resistencia:</h4>
+                                <p class="repetitions">&nbsp;{{item.repetitionsEndurance}}</p>
+                            </div>
+                            <div class="itemHypertrophy">
+                                <h4>Repeticiones para aumento muscular:</h4>
+                                <p class="repetitions">&nbsp;{{item.repetitionsHypertrophy}}</p>
+                            </div>
+                            <div class="itemSets">
+                                <h4>Series:</h4>
+                                <p class="sets">&nbsp;{{item.averageSetstHypertrophy}}</p>
+                            </div>
+
+                            <ul class="editDelete">
+                                <li class="contEdit" (click)="editar(item._id)">
+                                    <img class="editIco" src="assets/image/editIcon.svg" alt="Icono de editar">&nbsp;&nbsp;
+                                    <a (click)="editar(item._id)" class="editButtom">
+                                        Editar
+                                    </a>
+                                </li>
+                                <li class="contDelete" (click)="eliminar(item._id)">
+                                    <img class="deleteIco" src="assets/image/deleteIcon.svg" alt="Icono de eliminar">&nbsp;&nbsp;
+                                    <a (click)="eliminar(item._id)" class="deleteButtom">
+                                        Eliminar
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <td class="containerUpDe">
-                        <span class="editar-eliminar" (click)="editar(item._id)">Editar</span>
-                        <span class="editar-eliminar" (click)="eliminar(item._id)">Eliminar</span>
-                    </td>
                 </div>
             </li>
         }
