@@ -120,7 +120,7 @@
             </a>
           </li>
         }
-        @if(userData) {
+        <!-- @if(userData) {
           <li class="dropdown">
             <a class="anchor-link" [routerLink]="['dashboard/exercises']" routerLinkActive="active">
               Rutinas
@@ -157,7 +157,56 @@
               </li>
             </ul>
           </li>
+        } -->
+        @if(userData) {
+          <li class="dropdown">
+            <a class="anchor-link" [routerLink]="['page-routines']" routerLinkActive="active">
+              Rutinas
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="anchor-link" [routerLink]="['dashboard/exercises']" routerLinkActive="active">
+                  Formulario de Rutinas
+                </a>
+                <a class="anchor-link" [routerLink]="['dashboard/exercises-list']" routerLinkActive="active">
+                  Lista de Rutinas
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="anchor-link" [routerLink]="['page-meals']" routerLinkActive="active">
+              Alimentación
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="anchor-link" [routerLink]="['dashboard/meals']" routerLinkActive="active">
+                  Formulario de Alimentación
+                </a>
+                <a class="anchor-link" [routerLink]="['dashboard/meals-list']" routerLinkActive="active">
+                  Lista de alimentacion
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="anchor-link" [routerLink]="['page-supplements']" routerLinkActive="active">
+              Suplementación
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="anchor-link" [routerLink]="['dashboard/supplements']" routerLinkActive="active">
+                  Formulario de Suplementación
+                </a>
+                <a class="anchor-link" [routerLink]="['dashboard/supplements-list']" routerLinkActive="active">
+                  Lista de Suplementación
+                </a>
+              </li>
+            </ul>
+          </li>
         }
+
+
         @if(!userData) {
         <li>
           <a [routerLink]="['/register']" routerLinkActive="active">
@@ -179,7 +228,7 @@
         }
       </ul>
 
-      
+
     </nav>
   </div>
 </header>
@@ -188,5 +237,5 @@
    <div class="containerHello">
       <span class="userHello"> Hola {{userData.name}}</span>
    </div>
-  
+
   }

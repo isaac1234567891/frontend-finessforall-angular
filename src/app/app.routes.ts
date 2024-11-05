@@ -21,6 +21,7 @@ import { SupplementsDetailComponent } from './pages/supplements-detail/supplemen
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { PurchaseCompletedComponent } from './pages/purchase-completed/purchase-completed.component';
 
+
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
