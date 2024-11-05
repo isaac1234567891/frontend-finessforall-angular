@@ -27,11 +27,14 @@
 
         @if(userData) {
           <li class="dropdown">
-            <a class="anchor-link" [routerLink]="['dashboard/exercises']" routerLinkActive="active">
+            <a class="anchor-link" [routerLink]="['page-routines']" routerLinkActive="active">
               Rutinas
             </a>
             <ul class="submenu">
               <li>
+                <a class="anchor-link" [routerLink]="['dashboard/exercises']" routerLinkActive="active">
+                  Formulario de Rutinas
+                </a>
                 <a class="anchor-link" [routerLink]="['dashboard/exercises-list']" routerLinkActive="active">
                   lista de Rutinas
                 </a>
@@ -39,11 +42,14 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a class="anchor-link" [routerLink]="['dashboard/meals']" routerLinkActive="active">
+            <a class="anchor-link" [routerLink]="['page-meals']" routerLinkActive="active">
               Alimentación
             </a>
             <ul class="submenu">
               <li>
+                <a class="anchor-link" [routerLink]="['dashboard/meals']" routerLinkActive="active">
+                  Formulario de Alimentación
+                </a>
                 <a class="anchor-link" [routerLink]="['dashboard/meals-list']" routerLinkActive="active">
                   lista de alimentacion
                 </a>
@@ -51,11 +57,14 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a class="anchor-link" [routerLink]="['dashboard/supplements']" routerLinkActive="active">
+            <a class="anchor-link" [routerLink]="['page-supplements']" routerLinkActive="active">
               Suplementación
             </a>
             <ul class="submenu">
               <li>
+                <a class="anchor-link" [routerLink]="['dashboard/supplements']" routerLinkActive="active">
+                  Formulario de Suplementación
+                </a>
                 <a class="anchor-link" [routerLink]="['dashboard/supplements-list']" routerLinkActive="active">
                   lista de Suplementación
                 </a>
