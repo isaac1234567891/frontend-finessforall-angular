@@ -57,7 +57,7 @@
       @for (supplement of supplements; track $index) {
         <div class="item" >
           <a [routerLink]="['/page-supplements-detail', supplement._id]">
-          <figure>
+          <figure class="imgShop">
             <img
               [src]="supplement.urlImage"
               [alt]="supplement.name"

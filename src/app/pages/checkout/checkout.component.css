@@ -144,6 +144,11 @@ img{
   width: 100%;
   margin: 0 auto;
 }
+
+img.imageCarItem {
+  object-fit: cover;
+}
+
 .cart-items, .cart-totals {
   background-color: #fff;
   border-radius: 8px;

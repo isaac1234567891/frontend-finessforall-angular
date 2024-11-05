@@ -59,14 +59,14 @@
           <!-- Item 1 -->
           <div class="cart-item">
             <a [routerLink]="['/page-supplements-detail', item._id]">
-            <img
+            <img class="imageCarItem"
             [src]="item.info.urlImage"
             [alt]="item.info.name">
             </a>
             <div class="item-info">
               <h4>{{item.info.name}}</h4>
             </div>
-            <p class="descripcion">{{item.info.description}}</p>
+            <!-- <p class="descripcion">{{item.info.description}}</p> -->
             <div class="price">{{item.info.price | currency}}</div>
             <div class="quantity">
               <button (click)="substractOneItem( item.info._id )">-</button>

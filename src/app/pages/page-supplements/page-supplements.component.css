@@ -128,13 +128,24 @@ img{
 }
 
 .item{
-  border-radius: 10px;
-  border: .3rem solid var(--limerick--);
-  cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: var(--Dark-Gunmetal--);
+    border-radius: 2.5rem;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .item:hover{
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+figure.imgShop {
+  border-radius: 1.5rem;
+  height: 98%;
 }
 
 .item img{
