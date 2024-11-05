@@ -592,7 +592,7 @@ li.social-item {
     }
     label.menu-icon {
         position: absolute;
-        top: 20px;
+        top: 38px;
         right: 20px;
     }
     .menu {
@@ -619,9 +619,9 @@ li.social-item {
         text-decoration: none;
         cursor: pointer;
     }
-    span {
+    /* span {
       padding: 10rem;
-    }
+    } */
 
     section.main-banner-section {
         background-position: -18rem 0;
