@@ -374,8 +374,9 @@ a.main__banner-button {
 .text-form {
   color: var(--limerick--);
   font-size: 3rem;
-  font-family: "Abril Fatface", serif;
+  font-family: "Roboto", sans-serif;
   padding-bottom: 3rem;
+  text-align: center;
 }
 .text-form2 {
   margin-bottom: 3.5rem;

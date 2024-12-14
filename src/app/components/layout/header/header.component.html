@@ -160,7 +160,8 @@
         } -->
         @if(userData) {
           <li class="dropdown">
-            <a class="anchor-link" [routerLink]="['page-routines']" routerLinkActive="active">
+            <!-- <a class="anchor-link" [routerLink]="['page-routines']" routerLinkActive="active"> -->
+              <a class="anchor-link" [routerLink]="['dashboard/exercises-list']" routerLinkActive="active">
               Rutinas
             </a>
             <ul class="submenu">
@@ -175,7 +176,8 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a class="anchor-link" [routerLink]="['page-meals']" routerLinkActive="active">
+            <!-- <a class="anchor-link" [routerLink]="['page-meals']" routerLinkActive="active"> -->
+              <a class="anchor-link" [routerLink]="['dashboard/meals-list']" routerLinkActive="active">
               Alimentación
             </a>
             <ul class="submenu">
